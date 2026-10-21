@@ -1,3 +1,7 @@
 # Current verification scope
 
-AI-assisted prototype. This public repository includes the exact reviewed source candidate and its historical local evidence, plus the compiled frontend in docs/. DEPLOYED_PROTOTYPE.json records the current free Studio constructor and byte verification. The constructor is FINALIZED/SUCCESS, NORMAL full consensus, zero value. The frontend wallet business workflow has not yet been verified live. Historical null metadata belongs to the frozen local candidate. No adoption, external users, audit, reward or portal acceptance is claimed. The Project contract is not separately counted as an independent IC.
+AI-assisted experimental prototype. The free Studio constructor is FINALIZED/SUCCESS with exact source bytes; source, tests, reviewed frontend and compiled docs/ are published. The contract is part of this Project, not a second independent IC.
+
+MetaMask marked the shared everyprovin.github.io origin Malicious during the separate ConfigCohort connection test. That request was canceled. ClusterAtlas wallet connection and the complete frontend transaction workflow have not been attempted or verified; no risk override, business transaction, Project submission or acceptance is claimed. This warning is unresolved.
+
+Exact original metric bytes are additionally published under profile05/projects/cluster-atlas/fixtures/metric.json, matching the deployed contract locator suffix. Use an immutable commit containing that file and SHA256 148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a. The metric is fictional; no real-world distance or clustering validation is claimed. Historical null metadata belongs to the frozen local candidate.
