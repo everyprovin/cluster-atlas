@@ -9,13 +9,13 @@
     "build": "tsc --noEmit && vite build"
   },
   "dependencies": {
-    "genlayer-js": "2.0.0-rc.2"
+    "genlayer-js": "1.1.8"
   },
   "devDependencies": {
     "typescript": "5.9.3",
+    "viem": "2.57.7",
     "vite": "7.1.12",
-    "vitest": "3.2.4",
-    "viem": "2.57.7"
+    "vitest": "3.2.4"
   },
   "packageManager": "pnpm@11.25.0"
 }

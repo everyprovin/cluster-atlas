@@ -1,0 +1,1041 @@
+
+===== actual-sdk-tests.log | SHA256 26a48761622068c461b8ba17f26e44dd656f506fa66295d1c3b6f0b0d958d60e | 854 bytes =====
+WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks
+INFO: Clearing artifacts directory: artifacts
+INFO: Using the following configuration:
+INFO:   RPC URL: http://127.0.0.1:4000/api
+INFO:   Selected Network: localnet
+INFO:   Available networks: ['localnet', 'studionet', 'testnet_asimov', 'testnet_bradbury']
+INFO:   Selected chain type: localnet
+INFO:   Available chains: localnet, studionet, testnet_asimov, testnet_bradbury
+INFO:   Contracts directory: contracts
+INFO:   Artifacts directory: artifacts
+INFO:   Environment: .env
+INFO:   Default wait interval: 3000 ms
+INFO:   Default wait retries: 50
+INFO:   Leader only mode: False
+..................................                                       [100%]
+34 passed in 3.82s
+
+===== actual-sdk-ui-corrected-red.log | SHA256 cc8bd93c231386cfc55dbb6ec4e88d80491ee8e488bf297432d7eac46869c798 | 6883 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+Error using provider for method eth_sendTransaction: Error: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+    at Provider.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\runtime-public-errors.test.ts:9:251)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+ ❯ tests/runtime-public-errors.test.ts (9 tests | 6 failed) 306ms
+   × actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error 164ms
+     → expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+   × actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error 52ms
+     → expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+   × actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error 27ms
+     → expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+   × actual official SDK supplied leader packet [] cannot override independent raw proof 26ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+   × actual official SDK supplied leader packet [{"mode":"validator","execution_result":"SUCCESS"}] cannot override independent raw proof 8ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+   ✓ actual official SDK supplied leader packet [{"mode":"leader","execution_result":"ERROR"}] cannot override independent raw proof 9ms
+   ✓ actual official SDK supplied leader packet [{"mode":"leader","execution_result":"SUCCESS"},{"mode":"leader","execution_result":"SUCCESS"}] cannot override independent raw proof 5ms
+   ✓ actual official SDK absent leader evidence may remain absent while independent raw proof is mandatory 10ms
+   × late provider replacement during final accounts read cannot adopt a cached connected context 2ms
+     → promise resolved "'0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb…'" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+ FAIL  tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+ FAIL  tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+AssertionError: expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+
+- Expected
++ Received
+
+- FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++
++
++
++
++
++
++
++
++ 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
++
++
++
++
++
++
++
++
++
++ No pending submission in this session.
++
++
++
++
++ An unknown RPC error occurred.
++
++ Details: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++ Version: viem@2.57.7
++
++ 02:25:19 · An unknown RPC error occurred.
++
++ Details: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++ Version: viem@2.57.7
+
+ ❯ tests/runtime-public-errors.test.ts:16:553
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  tests/runtime-public-errors.test.ts > actual official SDK supplied leader packet [] cannot override independent raw proof
+ FAIL  tests/runtime-public-errors.test.ts > actual official SDK supplied leader packet [{"mode":"validator","execution_result":"SUCCESS"}] cannot override independent raw proof
+AssertionError: promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "record_id": "demo",
++   "revision": 1,
+  }
+
+ ❯ tests/runtime-public-errors.test.ts:17:407
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  tests/runtime-public-errors.test.ts > late provider replacement during final accounts read cannot adopt a cached connected context
+AssertionError: promise resolved "'0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb…'" instead of rejecting
+
+- Expected: 
+Error {
+  "message": "rejected promise",
+}
+
++ Received: 
+"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+ ❯ tests/runtime-public-errors.test.ts:19:374
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  6 failed | 3 passed (9)
+   Start at  02:25:16
+   Duration  3.03s (transform 221ms, setup 0ms, collect 1.47s, tests 306ms, environment 1ms, prepare 471ms)
+
+
+===== actual-sdk-ui-green.log | SHA256 84375d460b3441c8b377b3a82cb38a17f60a1c86b1d4e604bdeaf1083348cee6 | 2693 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+Error using provider for method eth_sendTransaction: Error: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+    at Provider.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\runtime-public-errors.test.ts:9:251)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+ ✓ tests/runtime-public-errors.test.ts (9 tests) 325ms
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  02:18:59
+   Duration  5.85s (transform 459ms, setup 0ms, collect 2.08s, tests 325ms, environment 0ms, prepare 1.82s)
+
+
+===== actual-sdk-ui-red.log | SHA256 6a4e12ae550bc75b7c62935f24376b9ee27e4da250d34974224ef6938e40df91 | 7182 bytes =====
+✓ Lockfile passes supply-chain policies (verified 59m ago)
+Lockfile is up to date, resolution step is skipped
+Already up to date
+
+Done in 3.9s using pnpm v11.25.0
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+Error using provider for method eth_sendTransaction: Error: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+    at Provider.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\runtime-public-errors.test.ts:9:251)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+ ❯ tests/runtime-public-errors.test.ts (9 tests | 6 failed) 351ms
+   × actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error 175ms
+     → expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+   × actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error 61ms
+     → expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+   × actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error 43ms
+     → expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+   × actual official SDK supplied leader packet [] cannot override independent raw proof 30ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+   × actual official SDK supplied leader packet [{"mode":"validator","execution_result":"SUCCESS"}] cannot override independent raw proof 9ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+   ✓ actual official SDK supplied leader packet [{"mode":"leader","execution_result":"ERROR"}] cannot override independent raw proof 11ms
+   ✓ actual official SDK supplied leader packet [{"mode":"leader","execution_result":"SUCCESS"},{"mode":"leader","execution_result":"SUCCESS"}] cannot override independent raw proof 5ms
+   ✓ actual official SDK absent leader evidence may remain absent while independent raw proof is mandatory 11ms
+   × late provider replacement during final accounts read cannot adopt a cached connected context 3ms
+     → promise resolved "'0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb…'" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+ FAIL  tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+ FAIL  tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+AssertionError: expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+
+- Expected
++ Received
+
+- FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++
++
++
++
++
++
++
++
++ 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
++
++
++
++
++
++
++
++
++
++ No pending submission in this session.
++
++
++
++
++ An unknown RPC error occurred.
++
++ Details: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++ Version: viem@2.57.7
++
++ 02:18:25 · An unknown RPC error occurred.
++
++ Details: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++ Version: viem@2.57.7
+
+ ❯ tests/runtime-public-errors.test.ts:16:553
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  tests/runtime-public-errors.test.ts > actual official SDK supplied leader packet [] cannot override independent raw proof
+ FAIL  tests/runtime-public-errors.test.ts > actual official SDK supplied leader packet [{"mode":"validator","execution_result":"SUCCESS"}] cannot override independent raw proof
+AssertionError: promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "record_id": "demo",
++   "revision": 1,
+  }
+
+ ❯ tests/runtime-public-errors.test.ts:17:407
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  tests/runtime-public-errors.test.ts > late provider replacement during final accounts read cannot adopt a cached connected context
+AssertionError: promise resolved "'0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb…'" instead of rejecting
+
+- Expected: 
+Error {
+  "message": "rejected promise",
+}
+
++ Received: 
+"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+ ❯ tests/runtime-public-errors.test.ts:19:374
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  6 failed | 3 passed (9)
+   Start at  02:18:20
+   Duration  4.68s (transform 331ms, setup 0ms, collect 1.74s, tests 351ms, environment 1ms, prepare 1.45s)
+
+
+===== build-complete-final.log | SHA256 b5a48021be01e59b977a5d9ecd6a0f4644f215f4f458e0946b331409f4375815 | 756 bytes =====
+$ tsc --noEmit && vite build
+vite v7.1.12 building for production...
+transforming...
+✓ 462 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.36 kB │ gzip:   0.26 kB
+dist/assets/index-jxh9bEt_.css    5.39 kB │ gzip:   1.88 kB
+dist/assets/ccip-C9MYYEDj.js      2.89 kB │ gzip:   1.33 kB
+dist/assets/index-Bz2o0w7c.js   554.91 kB │ gzip: 123.29 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.31s
+
+===== build-final.log | SHA256 1fef357db9c4ec26d4bf12063c248861d47142073358ddb130abb9626a8f2c9b | 205 bytes =====
+$ tsc --noEmit && vite build
+tests/runtime-public-errors.test.ts(5,9): error TS2305: Module '"./public-studio-receipt"' has no exported member 'reference'.
+[ELIFECYCLE] Command failed with exit code 2.
+
+===== frontend-complete-final.log | SHA256 d1716905bad12a46c5ef72909bc395c34a9c2d46afb7b34888c386b8187882d0 | 21246 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ✓ tests/context.test.ts (4 tests) 13ms
+ ✓ tests/public-json.test.ts (2 tests) 15ms
+ ✓ tests/domain.test.ts (7 tests) 25ms
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/stable-sdk.test.ts > normal SDK write builds one stable consensus envelope and retains intent until an explicit rejection: rejected
+Error using provider for method eth_sendTransaction: Error: Rejected test request before any broadcast
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:16:387)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22) {
+  code: 4001
+}
+
+ ✓ tests/wallet.test.ts (48 tests) 90ms
+ ✓ tests/mutation-alias.test.ts (12 tests) 43ms
+stderr | tests/rpc-address.test.ts > characterizes the installed SDK transport preserving address case at a case-sensitive RPC boundary
+GenLayer RPC error (gen_call): Contract not found: 0x34d2df8e89d7b5817412d5645104fb8dd6c113b4
+
+stderr | tests/stable-sdk.test.ts > normal SDK write builds one stable consensus envelope and retains intent until an explicit rejection: unknown
+Error using provider for method eth_sendTransaction: Error: Transport lost at external wallet boundary; outcome unknown
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:16:452)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: could not decode response after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: could not decode response after wallet boundary; outcome unknown
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:6:259
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: could not decode response after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/rpc-address.test.ts > does not turn a real missing record response into a successful empty record
+GenLayer RPC error (gen_call): Record not found
+
+stderr | tests/stable-sdk.test.ts > official SDK also constructs its documented six-parameter envelope from a six-input ABI without a custom serializer
+Error using provider for method eth_sendTransaction: Error: Rejected before broadcast
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:19:1032)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22) {
+  code: 4001
+}
+
+ ✓ tests/stable-sdk.test.ts (6 tests) 131ms
+ ✓ tests/rpc-address.test.ts (4 tests) 61ms
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: invalid pointer after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: invalid pointer after wallet boundary; outcome unknown
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:6:259
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: invalid pointer after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+Error using provider for method eth_sendTransaction: Error: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+    at Provider.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\runtime-public-errors.test.ts:9:251)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: User rejected first normal request
+Error using provider for method eth_sendTransaction: Error: User rejected first normal request
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:7:246
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8) {
+  code: 4001
+}
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: could not decode user-rejected first request
+Error using provider for method eth_sendTransaction: Error: could not decode user-rejected first request
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:7:246
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8) {
+  code: 4001
+}
+
+ ✓ tests/connect-shell.test.ts (3 tests) 89ms
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: could not decode user-rejected first request
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+ ✓ tests/one-shot-wallet.test.ts (4 tests) 116ms
+ ✓ tests/connect-events.test.ts (31 tests) 61ms
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual official SDK proof followed by business view I/O failure remains unresolved without echoing that error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+ ✓ tests/runtime-public-errors.test.ts (10 tests) 340ms
+ ✓ tests/ui-race.test.ts (6 tests) 2057ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  1930ms
+
+ Test Files  12 passed (12)
+      Tests  137 passed (137)
+   Start at  02:28:59
+   Duration  4.08s (transform 2.80s, setup 0ms, collect 18.77s, tests 3.04s, environment 9ms, prepare 7.40s)
+
+
+===== frontend-final-corrected.log | SHA256 043f7d83e05fd02ace5b9b2bbd299374a9eb65c50d9bc7252c1a4fd018614694 | 21158 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ✓ tests/public-json.test.ts (2 tests) 16ms
+ ✓ tests/context.test.ts (4 tests) 12ms
+ ✓ tests/domain.test.ts (7 tests) 24ms
+stderr | tests/rpc-address.test.ts > characterizes the installed SDK transport preserving address case at a case-sensitive RPC boundary
+GenLayer RPC error (gen_call): Contract not found: 0x34d2df8e89d7b5817412d5645104fb8dd6c113b4
+
+stderr | tests/rpc-address.test.ts > does not turn a real missing record response into a successful empty record
+GenLayer RPC error (gen_call): Record not found
+
+ ✓ tests/rpc-address.test.ts (4 tests) 63ms
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/stable-sdk.test.ts > normal SDK write builds one stable consensus envelope and retains intent until an explicit rejection: rejected
+Error using provider for method eth_sendTransaction: Error: Rejected test request before any broadcast
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:16:387)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22) {
+  code: 4001
+}
+
+stderr | tests/stable-sdk.test.ts > normal SDK write builds one stable consensus envelope and retains intent until an explicit rejection: unknown
+Error using provider for method eth_sendTransaction: Error: Transport lost at external wallet boundary; outcome unknown
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:16:452)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/stable-sdk.test.ts > official SDK also constructs its documented six-parameter envelope from a six-input ABI without a custom serializer
+Error using provider for method eth_sendTransaction: Error: Rejected before broadcast
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:19:1032)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22) {
+  code: 4001
+}
+
+ ✓ tests/stable-sdk.test.ts (6 tests) 121ms
+ ✓ tests/mutation-alias.test.ts (12 tests) 36ms
+ ✓ tests/wallet.test.ts (48 tests) 109ms
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: could not decode response after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: could not decode response after wallet boundary; outcome unknown
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:6:259
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+Error using provider for method eth_sendTransaction: Error: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+    at Provider.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\runtime-public-errors.test.ts:9:251)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: could not decode response after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: invalid pointer after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: invalid pointer after wallet boundary; outcome unknown
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:6:259
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+ ✓ tests/connect-events.test.ts (31 tests) 67ms
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: invalid pointer after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: User rejected first normal request
+Error using provider for method eth_sendTransaction: Error: User rejected first normal request
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:7:246
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8) {
+  code: 4001
+}
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: could not decode user-rejected first request
+Error using provider for method eth_sendTransaction: Error: could not decode user-rejected first request
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:7:246
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8) {
+  code: 4001
+}
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: could not decode user-rejected first request
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+ ✓ tests/connect-shell.test.ts (3 tests) 93ms
+ ✓ tests/one-shot-wallet.test.ts (4 tests) 128ms
+ ✓ tests/runtime-public-errors.test.ts (9 tests) 281ms
+ ✓ tests/ui-race.test.ts (3 tests) 1896ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  1845ms
+
+ Test Files  12 passed (12)
+      Tests  133 passed (133)
+   Start at  02:21:04
+   Duration  3.71s (transform 2.00s, setup 0ms, collect 17.22s, tests 2.85s, environment 6ms, prepare 6.77s)
+
+
+===== frontend-final.log | SHA256 87903758cd2952f623227e152562e0a815e37e31480146b6947c24d9cb124ae5 | 21159 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ✓ tests/public-json.test.ts (2 tests) 17ms
+ ✓ tests/context.test.ts (4 tests) 11ms
+ ✓ tests/domain.test.ts (7 tests) 28ms
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+Error using provider for method eth_sendTransaction: Error: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+    at Provider.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\runtime-public-errors.test.ts:9:251)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+stderr | tests/runtime-public-errors.test.ts > actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+GenLayer RPC error (eth_getTransactionByHash): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+ ✓ tests/runtime-public-errors.test.ts (9 tests) 285ms
+ ✓ tests/wallet.test.ts (48 tests) 124ms
+ ✓ tests/ui-race.test.ts (3 tests) 3224ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  3160ms
+ ✓ tests/connect-events.test.ts (31 tests) 72ms
+ ✓ tests/mutation-alias.test.ts (12 tests) 40ms
+stderr | tests/rpc-address.test.ts > characterizes the installed SDK transport preserving address case at a case-sensitive RPC boundary
+GenLayer RPC error (gen_call): Contract not found: 0x34d2df8e89d7b5817412d5645104fb8dd6c113b4
+
+stderr | tests/rpc-address.test.ts > does not turn a real missing record response into a successful empty record
+GenLayer RPC error (gen_call): Record not found
+
+ ✓ tests/rpc-address.test.ts (4 tests) 82ms
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: could not decode response after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: could not decode response after wallet boundary; outcome unknown
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:6:259
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: could not decode response after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+ ✓ tests/connect-shell.test.ts (3 tests) 79ms
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: invalid pointer after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: invalid pointer after wallet boundary; outcome unknown
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:6:259
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+stderr | tests/one-shot-wallet.test.ts > real SDK fallback cannot issue a second wallet request or erase original unknown intent: invalid pointer after wallet boundary; outcome unknown
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: User rejected first normal request
+Error using provider for method eth_sendTransaction: Error: User rejected first normal request
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:7:246
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8) {
+  code: 4001
+}
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: could not decode user-rejected first request
+Error using provider for method eth_sendTransaction: Error: could not decode user-rejected first request
+    at C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\one-shot-wallet.test.ts:7:246
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/@vitest+runner@3.2.4/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8) {
+  code: 4001
+}
+
+stderr | tests/one-shot-wallet.test.ts > first actual wallet rejection clears a hashless pending intent with no second provider submission: could not decode user-rejected first request
+Error using provider for method eth_sendTransaction: Error: Only one wallet submission is permitted. Preserve the original outcome and inspect wallet activity.
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:83:24)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+ ✓ tests/one-shot-wallet.test.ts (4 tests) 118ms
+stderr | tests/stable-sdk.test.ts > normal SDK write builds one stable consensus envelope and retains intent until an explicit rejection: rejected
+Error using provider for method eth_sendTransaction: Error: Rejected test request before any broadcast
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:16:387)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22) {
+  code: 4001
+}
+
+stderr | tests/stable-sdk.test.ts > normal SDK write builds one stable consensus envelope and retains intent until an explicit rejection: unknown
+Error using provider for method eth_sendTransaction: Error: Transport lost at external wallet boundary; outcome unknown
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:16:452)
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\src\wallet.ts:85:31)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:20)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22)
+
+stderr | tests/stable-sdk.test.ts > official SDK also constructs its documented six-parameter envelope from a six-input ABI without a custom serializer
+Error using provider for method eth_sendTransaction: Error: Rejected before broadcast
+    at Object.request (C:\Users\Administrator\Documents\ChatGPT\web3\contributions\genlayer-2026-10-21\profile05\projects\cluster-atlas\frontend\tests\stable-sdk.test.ts:19:1032)
+    at Object.request (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/genlayer-js@1.1.8_eslint@9._82a59d42e342621a83003b11831057a9/node_modules/genlayer-js/dist/index.js:2388:35)
+    at withRetry.delay.count.count (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/buildRequest.ts:163:22)
+    at attemptRetry (file:///C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend/node_modules/.pnpm/viem@2.57.7_typescript@5.9.3/node_modules/viem/utils/promise/withRetry.ts:63:22) {
+  code: 4001
+}
+
+ ✓ tests/stable-sdk.test.ts (6 tests) 179ms
+
+ Test Files  12 passed (12)
+      Tests  133 passed (133)
+   Start at  02:19:38
+   Duration  9.55s (transform 5.50s, setup 0ms, collect 35.24s, tests 4.26s, environment 7ms, prepare 11.28s)
+
+
+===== postproof-io-red.log | SHA256 45a2d73e1365463ff49e12f2eb06a7f810c8442625a47395eb1d94a76bbecad9 | 3304 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+stderr | tests/runtime-public-errors.test.ts > actual official SDK proof followed by business view I/O failure remains unresolved without echoing that error
+GenLayer RPC error (gen_call): FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
+
+ ❯ tests/runtime-public-errors.test.ts (10 tests | 1 failed | 9 skipped) 175ms
+   ↓ actual Wallet + official SDK + actual public UI read failure keeps original context without echoing arbitrary error
+   ↓ actual Wallet + official SDK + actual public UI write failure keeps original context without echoing arbitrary error
+   ↓ actual Wallet + official SDK + actual public UI resume failure keeps original context without echoing arbitrary error
+   ↓ actual official SDK supplied leader packet [] cannot override independent raw proof
+   ↓ actual official SDK supplied leader packet [{"mode":"validator","execution_result":"SUCCESS"}] cannot override independent raw proof
+   ↓ actual official SDK supplied leader packet [{"mode":"leader","execution_result":"ERROR"}] cannot override independent raw proof
+   ↓ actual official SDK supplied leader packet [{"mode":"leader","execution_result":"SUCCESS"},{"mode":"leader","execution_result":"SUCCESS"}] cannot override independent raw proof
+   ↓ actual official SDK absent leader evidence may remain absent while independent raw proof is mandatory
+   ↓ late provider replacement during final accounts read cannot adopt a cached connected context
+   × actual official SDK proof followed by business view I/O failure remains unresolved without echoing that error 172ms
+     → expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/runtime-public-errors.test.ts > actual official SDK proof followed by business view I/O failure remains unresolved without echoing that error
+AssertionError: expected '\n\n\n\n\n\n\n\n0xbbbbbbbbbbbbbbbbbbb…' not to contain 'FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_…'
+
+- Expected
++ Received
+
+- FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++
++
++
++
++
++
++
++
++ 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
++
++
++
++
++
++
++
++
++
++ {
++   "address": "0x34d2df8e89d7b5817412d5645104fb8dd6c113b4",
++   "account": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
++   "chainId": 61999,
++   "recordId": "demo",
++   "method": "derive",
++   "hash": "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
++ }
++
++
++
++
++ An unknown RPC error occurred.
++
++ Details: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++ Version: viem@2.57.7
++
++ 02:27:45 · Submitted 0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
++ 02:27:45 · An unknown RPC error occurred.
++
++ Details: FICTIONAL_SENSITIVE_ACTUAL_SDK_ERROR_NOT_A_CREDENTIAL
++ Version: viem@2.57.7
+
+ ❯ tests/runtime-public-errors.test.ts:21:308
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  02:27:42
+   Duration  3.03s (transform 228ms, setup 0ms, collect 1.76s, tests 175ms, environment 1ms, prepare 520ms)
+
+
+===== stale-receipt-corrected-red.log | SHA256 c7b2c6d5ba0b17f83707f232ac8b64a7d4998954d0fad9a664be0975892c5a8e | 2075 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ❯ tests/ui-race.test.ts (6 tests | 3 failed) 1574ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  1470ms
+   ✓ actual action handler refuses loaded A when the visible ID is changed silently to B 20ms
+   ✓ actual page derives the loaded ID and expected revision, then discards a stale callback 17ms
+   × stale receipt must not survive actual page recordId change or appear beside loaded B 32ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+   × stale receipt must not survive actual page address change or appear beside loaded B 16ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+   × stale receipt must not survive actual page provider change or appear beside loaded B 16ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page recordId change or appear beside loaded B
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page address change or appear beside loaded B
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page provider change or appear beside loaded B
+AssertionError: expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+
+- Expected
++ Received
+
+- RECEIPT_A_ONLY
++ {
++   "hash": "0xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
++   "record": "A",
++   "marker": "RECEIPT_A_ONLY"
++ }
+
+ ❯ tests/ui-race.test.ts:24:805
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 3 passed (6)
+   Start at  02:25:22
+   Duration  2.95s (transform 293ms, setup 0ms, collect 175ms, tests 1.57s, environment 1ms, prepare 488ms)
+
+
+===== stale-receipt-late-red.log | SHA256 79708b90b3f04389033c0d3ddda844004dec9a1337cf92ced32cd795fddbbf13 | 2502 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ❯ tests/ui-race.test.ts (6 tests | 4 failed) 1621ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  1504ms
+   ✓ actual action handler refuses loaded A when the visible ID is changed silently to B 19ms
+   × actual page derives the loaded ID and expected revision, then discards a stale callback 34ms
+     → expected { marker: 'RECEIPT_LATE_A' } to be null
+   × stale receipt must not survive actual page recordId change or appear beside loaded B 23ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+   × stale receipt must not survive actual page address change or appear beside loaded B 18ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+   × stale receipt must not survive actual page provider change or appear beside loaded B 19ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ui-race.test.ts > actual page derives the loaded ID and expected revision, then discards a stale callback
+AssertionError: expected { marker: 'RECEIPT_LATE_A' } to be null
+
+- Expected: 
+null
+
++ Received: 
+{
+  "marker": "RECEIPT_LATE_A",
+}
+
+ ❯ tests/ui-race.test.ts:22:702
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page recordId change or appear beside loaded B
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page address change or appear beside loaded B
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page provider change or appear beside loaded B
+AssertionError: expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+
+- Expected
++ Received
+
+- RECEIPT_A_ONLY
++ {
++   "hash": "0xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
++   "record": "A",
++   "marker": "RECEIPT_A_ONLY"
++ }
+
+ ❯ tests/ui-race.test.ts:24:805
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 2 passed (6)
+   Start at  02:26:40
+   Duration  3.03s (transform 286ms, setup 0ms, collect 165ms, tests 1.62s, environment 1ms, prepare 388ms)
+
+
+===== stale-receipt-red.log | SHA256 c590695b00b07391020ccb4666f1cbc6169f259c24a298eb74058be7291bdc5e | 2075 bytes =====
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ❯ tests/ui-race.test.ts (6 tests | 3 failed) 1638ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  1538ms
+   ✓ actual action handler refuses loaded A when the visible ID is changed silently to B 15ms
+   ✓ actual page derives the loaded ID and expected revision, then discards a stale callback 18ms
+   × stale receipt must not survive actual page recordId change or appear beside loaded B 30ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+   × stale receipt must not survive actual page address change or appear beside loaded B 16ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+   × stale receipt must not survive actual page provider change or appear beside loaded B 17ms
+     → expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page recordId change or appear beside loaded B
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page address change or appear beside loaded B
+ FAIL  tests/ui-race.test.ts > stale receipt must not survive actual page provider change or appear beside loaded B
+AssertionError: expected '{\n  "hash": "0xddddddddddddddddddddd…' not to contain 'RECEIPT_A_ONLY'
+
+- Expected
++ Received
+
+- RECEIPT_A_ONLY
++ {
++   "hash": "0xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
++   "record": "A",
++   "marker": "RECEIPT_A_ONLY"
++ }
+
+ ❯ tests/ui-race.test.ts:24:683
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 3 passed (6)
+   Start at  02:24:08
+   Duration  2.92s (transform 290ms, setup 0ms, collect 159ms, tests 1.64s, environment 0ms, prepare 484ms)
+

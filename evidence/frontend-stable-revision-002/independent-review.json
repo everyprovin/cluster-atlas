@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "at": "2026-10-21T18:48:06.487Z",
+  "reviewer": "/root/genlayer_builder10",
+  "author": "/root/genlayer_projects05",
+  "verdict": "PASS_WITHIN_REVIEWED_SCOPE",
+  "blockingFindings": [],
+  "scope": "Fresh independent ONLY01/05 frozen002 peer. No earlier peer verdict inherited. Actual production main/ui/shell + Wallet + installed official1.1.8 are executed with independent synthetic DOM and fully fictional HTTP/provider I/O. Source/candidates, exact production deltas, protected artifacts, full upsert and independently rebuilt assets checked. No author source changes, UI/CDP/browser, real RPC/network/wallet, lifecycle or central/publication writes.",
+  "inputs": {
+    "revision": {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-frontends-public-wallet-errors-0105-revision-002.json",
+      "bytes": 3787,
+      "sha256": "d3dc57adaa9513f91bd7586104855c5fcab11cff8aa2d6d9e95ddb76252534d0"
+    },
+    "completeUpload": {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-frontends-public-wallet-errors-0105-complete-upload-manifest-002.json",
+      "bytes": 80080,
+      "sha256": "6e96c7b32abaffeba181df3ddd862fbf5ee3d4d7194804869c69c9fcbc3f5c3b"
+    },
+    "initialChangesRequestedPeer": {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-frontends-stable-sdk-0105-peer-review-001.json",
+      "bytes": 15559,
+      "sha256": "79707e080dc0bc7d0d279097d937052c5e376f1fc9dcee1ee918f5533f867b6f"
+    }
+  },
+  "projects": [
+    {
+      "profile": "01",
+      "project": "ranked-agenda",
+      "verdict": "PASS_WITHIN_REVIEWED_SCOPE",
+      "frontendSourceTreeSha256": "5b2e8eb3fc6e9a9f6803623afde1e05786a8efac06bf36ff6afedf8962df1f04",
+      "walletSha256": "0ead28b72e1b13b8e03215e562dd09353e0208c43e7ed041c4ebbda659427b82",
+      "uiOrShellSha256": "dd1a75ef0c138d3636f6464babe058d302ddefb093946e92995d564d286fcf2c",
+      "independentFullFrontendTests": 130,
+      "independentTypeScriptAndViteExitCode": 0,
+      "rebuiltFrozenAssetsMatched": 5,
+      "independentWalletSDKBoundaryCases": 13,
+      "independentActualMainDOMCases": 9,
+      "independentSDKLeaderCases": 6,
+      "contractSdkTests": {
+        "authorPassed": 28,
+        "sourceTestsAndFixturesHashBound": true,
+        "reviewerReran": false
+      },
+      "artifactIntegrity": {
+        "profile": "01",
+        "project": "ranked-agenda",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile01\\projects\\ranked-agenda",
+        "tempFrontend": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\tmp\\peer-0105-002\\ranked-agenda\\frontend",
+        "frontendFiles": 23,
+        "distFiles": 5,
+        "uploadFiles": 35,
+        "withReservations": 38,
+        "protectedFiles": 5,
+        "historicalArtifacts": 5,
+        "priorCandidateFiles": 27,
+        "frontendSourceTreeSha256": "5b2e8eb3fc6e9a9f6803623afde1e05786a8efac06bf36ff6afedf8962df1f04",
+        "walletSha256": "0ead28b72e1b13b8e03215e562dd09353e0208c43e7ed041c4ebbda659427b82",
+        "uiOrShellSha256": "dd1a75ef0c138d3636f6464babe058d302ddefb093946e92995d564d286fcf2c",
+        "expectedTests": 130,
+        "contractTestsRetainedFromAuthor": 28,
+        "allHashesMatch": true
+      },
+      "transientObservation": {
+        "project": "ranked-agenda",
+        "case": "late-A-proof",
+        "transientStaleDOMAssignments": 2,
+        "finalReceiptAbsent": true,
+        "businessWriteBypass": false
+      }
+    },
+    {
+      "profile": "01",
+      "project": "fair-share-board",
+      "verdict": "PASS_WITHIN_REVIEWED_SCOPE",
+      "frontendSourceTreeSha256": "f79cf229f7971aa29175c9e925b51e4d7e46aa8fd81132ed098a056c24dcd2e1",
+      "walletSha256": "d83c7fbf3e208928c685080aec11c3e73643d429075ab043db0e25f45e4856a9",
+      "uiOrShellSha256": "dd1a75ef0c138d3636f6464babe058d302ddefb093946e92995d564d286fcf2c",
+      "independentFullFrontendTests": 126,
+      "independentTypeScriptAndViteExitCode": 0,
+      "rebuiltFrozenAssetsMatched": 5,
+      "independentWalletSDKBoundaryCases": 13,
+      "independentActualMainDOMCases": 9,
+      "independentSDKLeaderCases": 6,
+      "contractSdkTests": {
+        "authorPassed": 29,
+        "sourceTestsAndFixturesHashBound": true,
+        "reviewerReran": false
+      },
+      "artifactIntegrity": {
+        "profile": "01",
+        "project": "fair-share-board",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile01\\projects\\fair-share-board",
+        "tempFrontend": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\tmp\\peer-0105-002\\fair-share-board\\frontend",
+        "frontendFiles": 23,
+        "distFiles": 5,
+        "uploadFiles": 35,
+        "withReservations": 38,
+        "protectedFiles": 5,
+        "historicalArtifacts": 5,
+        "priorCandidateFiles": 27,
+        "frontendSourceTreeSha256": "f79cf229f7971aa29175c9e925b51e4d7e46aa8fd81132ed098a056c24dcd2e1",
+        "walletSha256": "d83c7fbf3e208928c685080aec11c3e73643d429075ab043db0e25f45e4856a9",
+        "uiOrShellSha256": "dd1a75ef0c138d3636f6464babe058d302ddefb093946e92995d564d286fcf2c",
+        "expectedTests": 126,
+        "contractTestsRetainedFromAuthor": 29,
+        "allHashesMatch": true
+      },
+      "transientObservation": {
+        "project": "fair-share-board",
+        "case": "late-A-proof",
+        "transientStaleDOMAssignments": 2,
+        "finalReceiptAbsent": true,
+        "businessWriteBypass": false
+      }
+    },
+    {
+      "profile": "05",
+      "project": "config-cohort",
+      "verdict": "PASS_WITHIN_REVIEWED_SCOPE",
+      "frontendSourceTreeSha256": "3208632bdaf5a1438772fcb24e3d25d0f4e59ffe8544b84e1eae386dfe4601e7",
+      "walletSha256": "9db843c69d7d43cea0f8586b195cda15de7697aeee253c65458a74113c9cf779",
+      "uiOrShellSha256": "294ba31f9b95ec8226a408a19ded69086d78a42655439157efaa77275ccc9370",
+      "independentFullFrontendTests": 137,
+      "independentTypeScriptAndViteExitCode": 0,
+      "rebuiltFrozenAssetsMatched": 4,
+      "independentWalletSDKBoundaryCases": 13,
+      "independentActualMainDOMCases": 9,
+      "independentSDKLeaderCases": 6,
+      "contractSdkTests": {
+        "authorPassed": 33,
+        "sourceTestsAndFixturesHashBound": true,
+        "reviewerReran": false
+      },
+      "artifactIntegrity": {
+        "profile": "05",
+        "project": "config-cohort",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\config-cohort",
+        "tempFrontend": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\tmp\\peer-0105-002\\config-cohort\\frontend",
+        "frontendFiles": 28,
+        "distFiles": 4,
+        "uploadFiles": 39,
+        "withReservations": 42,
+        "protectedFiles": 3,
+        "historicalArtifacts": 5,
+        "priorCandidateFiles": 31,
+        "frontendSourceTreeSha256": "3208632bdaf5a1438772fcb24e3d25d0f4e59ffe8544b84e1eae386dfe4601e7",
+        "walletSha256": "9db843c69d7d43cea0f8586b195cda15de7697aeee253c65458a74113c9cf779",
+        "uiOrShellSha256": "294ba31f9b95ec8226a408a19ded69086d78a42655439157efaa77275ccc9370",
+        "expectedTests": 137,
+        "contractTestsRetainedFromAuthor": 33,
+        "allHashesMatch": true
+      },
+      "transientObservation": {
+        "project": "config-cohort",
+        "case": "late-A-proof",
+        "transientStaleDOMAssignments": 0,
+        "finalReceiptAbsent": true,
+        "businessWriteBypass": false
+      }
+    },
+    {
+      "profile": "05",
+      "project": "cluster-atlas",
+      "verdict": "PASS_WITHIN_REVIEWED_SCOPE",
+      "frontendSourceTreeSha256": "a14c1ebd90a5ecef13b306b2e9fddde3cb966f48befa6f78d3ccaeeeb700c658",
+      "walletSha256": "dde646928652b16ac681b70a278b23f213f1501238d1a1a74cea2fe7f54103ec",
+      "uiOrShellSha256": "294ba31f9b95ec8226a408a19ded69086d78a42655439157efaa77275ccc9370",
+      "independentFullFrontendTests": 137,
+      "independentTypeScriptAndViteExitCode": 0,
+      "rebuiltFrozenAssetsMatched": 4,
+      "independentWalletSDKBoundaryCases": 13,
+      "independentActualMainDOMCases": 9,
+      "independentSDKLeaderCases": 6,
+      "contractSdkTests": {
+        "authorPassed": 34,
+        "sourceTestsAndFixturesHashBound": true,
+        "reviewerReran": false
+      },
+      "artifactIntegrity": {
+        "profile": "05",
+        "project": "cluster-atlas",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\cluster-atlas",
+        "tempFrontend": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\tmp\\peer-0105-002\\cluster-atlas\\frontend",
+        "frontendFiles": 28,
+        "distFiles": 4,
+        "uploadFiles": 39,
+        "withReservations": 42,
+        "protectedFiles": 3,
+        "historicalArtifacts": 5,
+        "priorCandidateFiles": 31,
+        "frontendSourceTreeSha256": "a14c1ebd90a5ecef13b306b2e9fddde3cb966f48befa6f78d3ccaeeeb700c658",
+        "walletSha256": "dde646928652b16ac681b70a278b23f213f1501238d1a1a74cea2fe7f54103ec",
+        "uiOrShellSha256": "294ba31f9b95ec8226a408a19ded69086d78a42655439157efaa77275ccc9370",
+        "expectedTests": 137,
+        "contractTestsRetainedFromAuthor": 34,
+        "allHashesMatch": true
+      },
+      "transientObservation": {
+        "project": "cluster-atlas",
+        "case": "late-A-proof",
+        "transientStaleDOMAssignments": 0,
+        "finalReceiptAbsent": true,
+        "businessWriteBypass": false
+      }
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "id": "0105-PUBLIC-SDK-ERROR-DOM",
+      "status": "VERIFIED_FIXED_WITHIN_SCOPE",
+      "evidence": "All4 actual main Load, original-provider write error, official ABI fallback error and original-hash post-proof business-read error use fixed UNVERIFIED public diagnostics. Fictional nonhex sentinel never appears in the public DOM/trail. Hashless write uncertainty and exact observed hash remain persisted; forced second events do not forward another mutation. Separate actual ui.run/shell.run + Wallet/SDK integration independently agrees. No real credential or service packet was used."
+    },
+    {
+      "id": "05-EXPLICIT-EMPTY-SDK-LEADER",
+      "status": "VERIFIED_FIXED_WITHIN_SCOPE",
+      "evidence": "Actual official SDK formatter receives a first controlled transaction packet distinct from mandatory independent raw packet. Explicit[], validator-only, leaderERROR and multiple leaders reject/retain exact original pending; a single successful leader and missing SDK evidence with complete independent raw proof pass. These24 cases were executed across all4 packages, not inferred from direct assert helpers."
+    },
+    {
+      "id": "05-LATE-CONNECT-PROVIDER-IDENTITY",
+      "status": "VERIFIED_FIXED_WITHIN_SCOPE",
+      "evidence": "Actual final eth_accounts await replaces getProvider with same-account/chain provider. All4 reject connected-context adoption; no mutation.05 source equality confirms exactly the two authorized guard conditions and no unrelated wallet code changes."
+    },
+    {
+      "id": "PERSISTENT-STALE-RECEIPT-CONTEXT",
+      "status": "VERIFIED_FIXED_PERSISTENT_SCOPE_WITH_NONBLOCKING_OBSERVATION",
+      "evidence": "Actual main verified A receipt clears on record/address/provider changes and is not reused after a successful B read in all4. Delayed original A proof after visible B ends with empty receipt and no loaded A business state.01 still has transient queued assignments documented below; do not claim zero intermediate DOM writes."
+    }
+  ],
+  "nonBlockingObservations": [
+    {
+      "id": "01-TRANSIENT-QUEUED-RECEIPT-DOM",
+      "priority": 3,
+      "projects": [
+        "ranked-agenda",
+        "fair-share-board"
+      ],
+      "location": "frontend/src/main.ts wallet report callback queueMicrotask(showTransaction), showTransaction, loaded stale guard",
+      "reproduction": "Pause the first actual SDK transaction response during an original-hash Observe, change visible record A→B, then release a strict valid A proof and A business read. Wallet.observe sets evidence and emits save/finality reports; queued showTransaction assigns the A hash to receipt DOM twice before loaded rejects and clearReceipt removes it. Both01 produce two setter observations; both05 produce zero.",
+      "limits": "Final DOM is empty. No real browser painted frame, secret disclosure, wrong signer, new send, incorrect chain success, accepted B state or authorization bypass is demonstrated. It is a same-turn/microtask intermediate assignment in the synthetic DOM model; this is not a claim that users can see a stale rendered frame.",
+      "recommendation": "If zero intermediate mismatched assignments is required, gate showTransaction evidence on the visible original record/address context or defer receipt rendering until loaded validates. Preserve pending/public metadata and RevealVault while doing so.",
+      "blocking": false,
+      "rootAndAuthorNotified": true
+    }
+  ],
+  "independentVerification": {
+    "actualWalletSDKBoundaryCases": 52,
+    "actualMainDOMCases": 36,
+    "additionalActualSDKLeaderCases": 24,
+    "totalFocusedCases": 112,
+    "fullFrontendTests": 530,
+    "fullSuiteCounts": [
+      130,
+      126,
+      137,
+      137
+    ],
+    "fullSuiteExitCodes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "typeScriptAndViteExitCodes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "rebuiltAssetHashesMatched": 18,
+    "buildLocation": "Independent temporary exact input copies; author dist untouched. Four tests/builds invoked with a default deny fetch guard; tests substitute explicit controlled I/O.",
+    "actualContractSdk": "Author124 tests retained with source/fixtures and historical identities; reviewer did not repeat unchanged Python contract suites for this presentation/two-guard revision.",
+    "runtimeHarness": "The earlier independent actual-SDK harness is re-executed against hash-bound002 with fresh assertions; no old result is copied. Additional independent actual-main loader executes production main/ui/shell/Wallet/SDK, omitting only CSS side effects in the DOM model.05 typed/domain views differ from01; actual decoded record shapes render through unchanged business hooks.",
+    "artifactCounts": {
+      "frontendInputs": 102,
+      "completeUpsertFiles": 148,
+      "reservedBudgets": [
+        38,
+        38,
+        42,
+        42
+      ],
+      "priorCandidateInputsAndBuilds": 116,
+      "protectedContractAndFixtures": 16,
+      "historicalEntriesChecked": 20
+    }
+  },
+  "invariants": {
+    "oneShotAndUnknown": "Unmodified official1.1.8 normal five-input sender/recipient/zero envelope; original unknown/fallback at most1 underlying mutation; first actual4001 may clear, unknown persists across Wallet reconstruction and cannot replay. Existing six-input/aliases/event guards also passed the independently rerun full suites.",
+    "proofAndProjection": "Full original hash/sender/recipient/value0/finality/NORMAL/nonleader-only/majority/unique-success raw proof remains mandatory. All supplied SDK conflicts in tested sender/value/leader cases reject before selected public evidence; missing fields are not synthesized. Selected synthetic node_config/VM extensions never enter receipt DOM.",
+    "privateRevealMaterial": "01 Wallet/receipt/domain/RevealVault are exact001 bytes. Actual RAM-only synthetic prepare/explicit-export gate/bound import/wrong-account rejection independently tested; pending storage has neither salt nor private ranking. Actual application private-export confirmation remains source-inspected and existing tests rerun; no real vault read or real material persisted.",
+    "sourceAndHistory": "4current trees match candidate files and aggregate;05 wallet equals exactly provider-final-identity and exactly-one-supplied-leader edits.01 protected modules unchanged. Original001 candidates/reports, previous peer and ZIP/manifest identities retain expected hashes. Full frontend upload includes prior unpublished fixes; remote state is not assumed."
+  },
+  "artifacts": [
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-ranked-agenda-tests.log",
+      "bytes": 28005,
+      "sha256": "3858a73dd512a482b0638ec0543d49727b327d68eebcb345e8eb747863dea9f1"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-ranked-agenda-build.log",
+      "bytes": 941,
+      "sha256": "606b13b7a863c8f9cf399a4d52d0f14c1e463c2b19966dc7b9672bb547d6289b"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-fair-share-board-tests.log",
+      "bytes": 28283,
+      "sha256": "ac40cac7cffe89c338a4bb13e62eb85e998e0bacc37e04acc06cb4a9faca5d5e"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-fair-share-board-build.log",
+      "bytes": 941,
+      "sha256": "dcf96f4a74dbca5284d0f0bb039f06a79f496a04d3c27c7dfc0443cd909fe445"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-config-cohort-tests.log",
+      "bytes": 20879,
+      "sha256": "c186b4fcb9839a212714e3d0ad24168690815e87afe3f3f7cb66fbc5f62aa275"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-config-cohort-build.log",
+      "bytes": 941,
+      "sha256": "99b2fd5e0cc16ba341cdd55ec999dc0bae9e53ca2c0969e6aa8eab843348d7fa"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-cluster-atlas-tests.log",
+      "bytes": 20880,
+      "sha256": "0312cc9f854df044e75f1f3f8879f705c8e4aba8827149b195f9d917f86d1e51"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-002-cluster-atlas-build.log",
+      "bytes": 941,
+      "sha256": "36289d4cd642d4d8dcfb75e76e55b00076864ba6a944c230b8cc1406bddcea45"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/tmp/project-0105-peer-prepare-002.mjs",
+      "bytes": 6205,
+      "sha256": "c3d0e9218148d56e80041ea131a060a8f1945937c6b9d046cb07492c97222f4d"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/tmp/project-0105-peer-runtime-002.mjs",
+      "bytes": 2778,
+      "sha256": "3ef02296b9afbfdb6ac1767aa1a8bff1a411f3f0f850c1173fc556313804212e"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/tmp/project-0105-peer-actual-main-002.mjs",
+      "bytes": 11795,
+      "sha256": "3daa054457364b38d911b7fc6c8608c0edf585c87ed0691ed6e36392673c4cd4"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/tmp/project-0105-peer-sdk-leaders-002.mjs",
+      "bytes": 4336,
+      "sha256": "ae30a76c92373a78172df58e74c5846b9bb037bcb74a575da370abb884196c46"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/tmp/peer-0105-002/no-network.mjs",
+      "bytes": 100,
+      "sha256": "57b36400bedfdc8f96755d8abf89e0b0515137df5c6cf8f51f315f682640e3f6"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/peer-projects-0105-stable-runtime-003.mjs",
+      "bytes": 13171,
+      "sha256": "6449bc9bcedc58b8dffd1498ac77e8ae32dd8a3819e70e3088764cd1ec549e68"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-integrity-002.json",
+      "bytes": 4153,
+      "sha256": "a305d57a106f3ac8270936547d021f44ad34248816c2dd834f321d334ed8d2fa"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-runtime-002.json",
+      "bytes": 19160,
+      "sha256": "826fb8a90199954280ceb67236628709ed9fb4f22153cc40f52ea3ab263e739d"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-actual-main-002.json",
+      "bytes": 9208,
+      "sha256": "22d2646784e0d1e3d0c207f00943da99166a3608d412f108b839c6af6f3a1be5"
+    },
+    {
+      "path": "C:/Users/Administrator/Documents/ChatGPT/web3/outputs/genlayer-builders-2026-10-21/project-0105-peer-sdk-leaders-002.json",
+      "bytes": 4705,
+      "sha256": "976da57f1c261190eea9891c5824d9dd1d5ed9fa99fc85c41c96bbe673e8d6e0"
+    }
+  ],
+  "limitations": [
+    "This is a limited code/runtime peer, not an all-sinks or repository-wide security assessment. Intentional public contract domain data is outside raw service/receipt redaction claims.",
+    "All DOM/provider/RPC objects here are fictional and offline. There is no real browser, actual wallet, real transaction, deployment, hosting, Portal submission, independent user/adoption or acceptance verification.",
+    "Official SDK console implementation is unchanged. No real raw packet, credentials, node_config or service secret was supplied, printed or persisted.",
+    "The report does not clear wallet warnings or authorize bypassing a safety prompt.",
+    "01 transient observation is retained; persistent stale/context cases passing must not be rewritten as proof that no intermediate DOM assignment can occur.",
+    "Independent peer applies only to these exact002 input/build hashes; future changes require new identity/review."
+  ]
+}

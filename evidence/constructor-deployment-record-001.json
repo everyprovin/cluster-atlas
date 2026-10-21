@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-20T23:59:46.356Z",
+  "title": "ClusterAtlas",
+  "kind": "project_contract",
+  "countedAsSeparateIndependentIC": false,
+  "profileSeq": 5,
+  "contractAddress": "0x3cB07E202CFA03F3174080c101a63b923fC79515",
+  "transactionHash": "0xcab161b68c9aa7f5fbe6a0e839016cd85783e75012c2384fa972d3ffafdcbe73",
+  "sourceSha256": "f56d06d4803c636ff0b7c17f6e56c22813833086ee92670ebca1256df3d86a14",
+  "network": "GenLayer Studio",
+  "chainId": 61999,
+  "constructorArgs": [],
+  "state": "FINALIZED",
+  "executionResult": "SUCCESS",
+  "executionMode": "NORMAL",
+  "leaderOnly": false,
+  "consensusResult": "MAJORITY_AGREE",
+  "value": 0,
+  "liveScope": "Constructor only; frontend wallet business lifecycle not exercised live.",
+  "publicSourceBytesVerified": true,
+  "onchainSourceSha256": "f56d06d4803c636ff0b7c17f6e56c22813833086ee92670ebca1256df3d86a14",
+  "onchainCodeReadbackVerified": true,
+  "publication": {
+    "repository": "https://github.com/everyprovin/cluster-atlas",
+    "commit": "102996a33f43479b37594a5b9fe95bc8a2c9a849"
+  },
+  "hosting": {
+    "url": "https://everyprovin.github.io/cluster-atlas/",
+    "nativePagesVisitSiteConfirmed": true,
+    "branch": "main",
+    "folder": "/docs",
+    "httpStatusVerified": false,
+    "walletConnectAttempted": false,
+    "businessFlowVerified": false,
+    "blockedBySharedOriginWalletAlert": true,
+    "alertRecord": "05-config-cohort-wallet-security-alert-001.json"
+  },
+  "actualPortalSubmitted": false,
+  "publicFixture": {
+    "url": "https://raw.githubusercontent.com/everyprovin/cluster-atlas/ee331c9e9b1ddfa0f5847ef38f793dc045bcb026/profile05/projects/cluster-atlas/fixtures/metric.json",
+    "commit": "ee331c9e9b1ddfa0f5847ef38f793dc045bcb026",
+    "sha256": "148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a",
+    "bytes": 429,
+    "publicBytesVerified": true,
+    "synthetic": true
+  }
+}

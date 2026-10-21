@@ -1,0 +1,14 @@
+import {afterEach,expect,it,vi} from 'vitest';
+import {abi,createClient} from 'genlayer-js';
+import {studionet} from 'genlayer-js/chains';
+import {getAddress,toHex} from 'viem';
+import {WalletSession} from '../src/wallet';
+import {RecordContext} from '../src/context';
+const lower='0x34d2df8e89d7b5817412d5645104fb8dd6c113b4',checksum=getAddress(lower),record={record_id:'demo',revision:0};
+type Request={method:string;params:{to:string;from:string;transaction_hash_variant:string;data:string}[]};
+function rpc(mode:'record'|'missing'|'revert'='record'){const calls:Request[]=[];const fetch=vi.fn(async(_input:unknown,init?:RequestInit)=>{const request=JSON.parse(String(init?.body));calls.push(request);if(request.method!=='gen_call')throw Error('Unexpected SDK method '+request.method);const correct=request.params[0].to===checksum;const reply=!correct?{error:{code:-32001,message:'Contract not found: '+request.params[0].to}}:mode==='missing'?{error:{code:-32000,message:'Record not found'}}:mode==='revert'?{result:{data:'0x',status:{code:1,message:'Record is revoked'}}}:{result:toHex(abi.calldata.encode(record)).slice(2)};return new Response(JSON.stringify({jsonrpc:'2.0',id:request.id,...reply}),{headers:{'Content-Type':'application/json'}});});vi.stubGlobal('fetch',fetch);return {calls,fetch};}
+afterEach(()=>{vi.unstubAllGlobals();});
+it('characterizes the installed SDK transport preserving address case at a case-sensitive RPC boundary',async()=>{const {calls}=rpc(),client=createClient({chain:studionet});await expect(client.readContract({address:lower,functionName:'get_record',args:['demo']})).rejects.toMatchObject({code:-32001});expect(await client.readContract({address:checksum,functionName:'get_record',args:['demo']})).toEqual(record);expect(calls.map(r=>r.params[0].to)).toEqual([lower,checksum]);});
+it('real production read passes a canonical checksummed target through the actual SDK from lowercase internal context',async()=>{const {calls}=rpc(),context=new RecordContext(()=>({address:checksum,recordId:'demo'})),token=context.start();expect(token.address).toBe(lower);expect(await new WalletSession().read(token.address,token.recordId)).toEqual(record);expect(calls).toHaveLength(1);expect(calls[0]).toMatchObject({method:'gen_call',params:[{to:checksum,from:'0x'+'0'.repeat(40),transaction_hash_variant:'latest-nonfinal'}]});expect(calls[0].params[0].data).toBe(abi.transactions.serialize([abi.calldata.encode(abi.calldata.makeCalldataObject('get_record',['demo'],undefined)),false]));});
+it('does not turn a real missing record response into a successful empty record',async()=>{rpc('missing');await expect(new WalletSession().read(lower,'demo')).rejects.toThrow('Record not found');});
+it('preserves actual SDK execution errors after canonicalizing the target',async()=>{rpc('revert');await expect(new WalletSession().read(lower,'demo')).rejects.toThrow('gen_call failed: Record is revoked');});

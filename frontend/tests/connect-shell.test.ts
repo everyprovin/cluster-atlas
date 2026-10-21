@@ -1,0 +1,17 @@
+import {beforeEach,expect,it,vi} from 'vitest';
+import {boot} from '../src/shell';
+const account='0x'+'b'.repeat(40),other='0x'+'c'.repeat(40),address='0x'+'a'.repeat(40);
+class Node extends EventTarget{
+ value='';disabled=false;textContent='';children:Node[]=[];id='';
+ constructor(public tag='div'){super();all.push(this);}
+ set innerHTML(html:string){for(const m of html.matchAll(/<([a-zA-Z]+)\b([^>]*\bid="([^"]+)"[^>]*)>/g)){const n=new Node(m[1]);n.id=m[3];n.value=/\bvalue="([^"]*)"/.exec(m[2])?.[1]??'';nodes.set(n.id,n);}}
+ prepend(n:Node){this.children.unshift(n);}click(){if(!this.disabled)this.dispatchEvent(new Event('click'));}
+}
+let nodes:Map<string,Node>,all:Node[],listeners:Map<string,(payload:unknown)=>void>;
+const el=(id:string)=>nodes.get(id)!;
+const flush=async()=>{for(let i=0;i<30;i++)await Promise.resolve();};
+beforeEach(()=>{nodes=new Map();all=[];listeners=new Map();const app=new Node();nodes.set('app',app);vi.stubGlobal('document',{querySelector:()=>app,getElementById:el,createElement:(tag:string)=>new Node(tag),querySelectorAll:(q:string)=>all.filter(n=>q.split(',').includes(n.tag))});vi.stubGlobal('window',{ethereum:{on:(event:string,fn:(payload:unknown)=>void)=>listeners.set(event,fn),request:async({method}:{method:string})=>method==='eth_chainId'?'0xf22f':method==='eth_accounts'||method==='eth_requestAccounts'?[account]:null},sessionStorage:{getItem:()=>null,setItem:()=>{},removeItem:()=>{}}});});
+function mount(){const app=boot('Event regression','Synthetic fixture','','',()=>false);el('address').value=address;el('recordId').value='demo';el('address').dispatchEvent(new Event('input'));return app;}
+it('real shell and WalletSession keep address and enabled Open after delayed unchanged provider events',async()=>{mount();el('connect').click();await flush();expect(el('account').textContent).toBe(account);expect(el('lock').disabled).toBe(false);listeners.get('chainChanged')?.('0xf22f');listeners.get('accountsChanged')?.([account]);await flush();expect(el('account').textContent).toBe(account);expect(el('lock').disabled).toBe(false);expect(el('notice').textContent).toContain('Wallet connected on Stable Studio 61999');});
+it('real shell invalidates loaded context and blocks Open after actual account change',async()=>{const app=mount();el('connect').click();await flush();const epoch=app.context.start();listeners.get('accountsChanged')?.([other]);await flush();expect(el('account').textContent).toBe('Wallet disconnected');expect(el('lock').disabled).toBe(true);expect(await app.context.load(epoch,Promise.resolve({record_id:'demo'}))).toBe(false);expect(el('notice').textContent).toContain('Wallet context changed');});
+it('does not log Connected if a meaningful event arrives between final provider read and shell continuation',async()=>{const provider=(window as unknown as {ethereum:{request:(args:{method:string})=>Promise<unknown>}}).ethereum;provider.request=async({method})=>{if(method==='eth_chainId')return '0xf22f';if(method==='eth_accounts'){queueMicrotask(()=>queueMicrotask(()=>listeners.get('accountsChanged')?.([other])));return [account];}return [account];};mount();el('connect').click();await flush();expect(el('account').textContent).toBe('Wallet disconnected');expect(el('lock').disabled).toBe(true);expect(el('notice').textContent).toContain('UNVERIFIED');expect(el('trail').children.some(n=>n.textContent.includes('Wallet connected on Stable Studio 61999'))).toBe(false);});

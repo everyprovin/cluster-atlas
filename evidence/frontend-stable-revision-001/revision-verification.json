@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-21T17:31:40.520092+00:00",
+  "author": "/root/genlayer_projects05",
+  "profile": "05",
+  "project": "cluster-atlas",
+  "status": "local_verified_fresh_peer_pending",
+  "baseline": {
+    "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\cluster-atlas\\evidence\\stable-sdk-2026-10-22\\baseline-manifest.json",
+    "bytes": 5489,
+    "sha256": "e08438bd2c01db280315dc5b36132c8dd85129f20cc22469192059337da56b8f",
+    "scope": "Exact current approved frontend snapshot before this compatibility revision; historical packages/manifests listed independently."
+  },
+  "deltaFromApprovedBaseline": [
+    {
+      "path": "frontend/package.json",
+      "before": {
+        "bytes": 429,
+        "sha256": "74f93a11b6fe15cca7b4b5cbddc6ac3925780d7d51d1599bcd616fffa02680c2"
+      },
+      "after": {
+        "bytes": 424,
+        "sha256": "3cabce28275aceaccde46e784d9af6dbe9a5207c182cb45f4f258ef628e5000a"
+      }
+    },
+    {
+      "path": "frontend/pnpm-lock.yaml",
+      "before": {
+        "bytes": 95858,
+        "sha256": "1a187b4ddf8c5f62a6902aa88f7d0acd1aa794d22cbc7cdc38a71893363f1f86"
+      },
+      "after": {
+        "bytes": 95838,
+        "sha256": "39f965b7289c75f0a1ebcd8f8ca98962131d1d3a500f477f170a1b9350b419f6"
+      }
+    },
+    {
+      "path": "frontend/src/shell.ts",
+      "before": {
+        "bytes": 9412,
+        "sha256": "c0dc8a7491ebac2c78b5e17547f77c40dc290d060887bf5c3acb66de1c82b87b"
+      },
+      "after": {
+        "bytes": 9544,
+        "sha256": "0b27be7183aeee1ed41ad32d8ab1831542694cc633f0f7b948ab9065a9130812"
+      }
+    },
+    {
+      "path": "frontend/src/wallet.ts",
+      "before": {
+        "bytes": 11778,
+        "sha256": "40ac278e184e51cafe2952ec77cee76ee305d649218e886287f624b01b8f0a27"
+      },
+      "after": {
+        "bytes": 15498,
+        "sha256": "7d4868d82da3873f76ad54d8104d1b3cd47384fd0ace2927aaac874458c8ecdb"
+      }
+    },
+    {
+      "path": "frontend/tests/connect-events.test.ts",
+      "before": null,
+      "after": {
+        "bytes": 6849,
+        "sha256": "09f57ea6da14c3baefbec27d50e6af49508e2b6795496a81a370325ea05c4a20"
+      }
+    },
+    {
+      "path": "frontend/tests/connect-shell.test.ts",
+      "before": null,
+      "after": {
+        "bytes": 3463,
+        "sha256": "95f5786da306e0527805f724925d58677e0f9676cde00fbfaac9c98c0a97077d"
+      }
+    },
+    {
+      "path": "frontend/tests/mutation-alias.test.ts",
+      "before": null,
+      "after": {
+        "bytes": 1806,
+        "sha256": "de692a7544cdd9ac11a004b5dd296d12f6f98d477881140eed3befacdfdd4f8d"
+      }
+    },
+    {
+      "path": "frontend/tests/one-shot-wallet.test.ts",
+      "before": null,
+      "after": {
+        "bytes": 2886,
+        "sha256": "caffc0d921269ac2160610832fa4a1fad4d71afe6178a55d10727448c8b8fad8"
+      }
+    },
+    {
+      "path": "frontend/tests/rpc-address.test.ts",
+      "before": null,
+      "after": {
+        "bytes": 2929,
+        "sha256": "6309a256dd3a3184646bc04f67890c3039201e3646780e1ccfc9375b463fea47"
+      }
+    },
+    {
+      "path": "frontend/tests/stable-sdk.test.ts",
+      "before": null,
+      "after": {
+        "bytes": 7867,
+        "sha256": "d62dcc97555baa2a7448995629ce2cc3a580a51e70bdc39ec96e715b4be8b445"
+      }
+    },
+    {
+      "path": "frontend/tests/wallet.test.ts",
+      "before": {
+        "bytes": 8767,
+        "sha256": "a489a769bbe4e26d27e4cc1443b8698da1012e1cc61a8027fdc0d4d72055c1c7"
+      },
+      "after": {
+        "bytes": 12200,
+        "sha256": "d34d6ed08342f53bf1df69e4610fb38f2099c81dff63fa80aba1ce3f47c105b1"
+      }
+    }
+  ],
+  "unchangedFrontendFiles": [
+    {
+      "path": "frontend/README.md",
+      "bytes": 320,
+      "sha256": "e5a24d7cd5cbfe2e17dad09fb446146a5055dd58d37e19fd9c2b777c6efebfc7"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 253,
+      "sha256": "0c1bd9cde69b25de3a858180aba40bd1792267a61fc2b56a10f324d2f06d2842"
+    },
+    {
+      "path": "frontend/pnpm-workspace.yaml",
+      "bytes": 82,
+      "sha256": "57a99a3c60c503878f848fe022a97a723f2691c82d9099662bedf8d22bf04e40"
+    },
+    {
+      "path": "frontend/src/context.ts",
+      "bytes": 1232,
+      "sha256": "d5ebd212ad1d916a61a8fd4fb84ef55f571e763885c7c77ceb020ccd4e6c3ef6"
+    },
+    {
+      "path": "frontend/src/domain.ts",
+      "bytes": 3697,
+      "sha256": "c9d4525d3c5ec9160cdca4975e9c55dd88b747913492972bf5a66aed6b39572c"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "bytes": 6332,
+      "sha256": "b81622225e5deba5611c25bc23b6b986a033cc63f112a10d47afcb1f06bee944"
+    },
+    {
+      "path": "frontend/src/public-json.ts",
+      "bytes": 1705,
+      "sha256": "c3b5bf4cd519263c9988b81ada6d41724b3060e9d65d42f23b91f65fe690daa2"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "bytes": 5393,
+      "sha256": "85866e9e83ca47c6990fa8b76488ffa171768585695ec2d52cf159dfd86ca612"
+    },
+    {
+      "path": "frontend/src/vite-env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "frontend/tests/context.test.ts",
+      "bytes": 1582,
+      "sha256": "40b1e4b0d5b25a92c61e61099df267fd4b084d2c74f7dc1341a69aa7bc71212e"
+    },
+    {
+      "path": "frontend/tests/domain.test.ts",
+      "bytes": 2199,
+      "sha256": "b8ec0601b934fd294432749ddf3da8016e55e6602dd430765123327c52dbc2be"
+    },
+    {
+      "path": "frontend/tests/public-json.test.ts",
+      "bytes": 680,
+      "sha256": "38e4f67f355894965583b07e3976afc1c866b62b09737cfcb2149994e6ba3199"
+    },
+    {
+      "path": "frontend/tests/public-studio-receipt.ts",
+      "bytes": 1008,
+      "sha256": "2b9d2c2dedb864c7fc334634ffff05988e4115eba74fb236ad5ac9c8533f2f7c"
+    },
+    {
+      "path": "frontend/tests/ui-race.test.ts",
+      "bytes": 3874,
+      "sha256": "a1ece1a4b61817484e7f73bce0b29c274a1dd83a63366cd3ecebb69cd890b5da"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 225,
+      "sha256": "4a71bf0d519cfc68771a7fbce06f7ff31cce7f83494f44e64454cbd14f838155"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 77,
+      "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968"
+    }
+  ],
+  "frontendFiles": [
+    {
+      "path": "README.md",
+      "bytes": 320,
+      "sha256": "e5a24d7cd5cbfe2e17dad09fb446146a5055dd58d37e19fd9c2b777c6efebfc7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 253,
+      "sha256": "0c1bd9cde69b25de3a858180aba40bd1792267a61fc2b56a10f324d2f06d2842"
+    },
+    {
+      "path": "package.json",
+      "bytes": 424,
+      "sha256": "3cabce28275aceaccde46e784d9af6dbe9a5207c182cb45f4f258ef628e5000a"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "bytes": 95838,
+      "sha256": "39f965b7289c75f0a1ebcd8f8ca98962131d1d3a500f477f170a1b9350b419f6"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "bytes": 82,
+      "sha256": "57a99a3c60c503878f848fe022a97a723f2691c82d9099662bedf8d22bf04e40"
+    },
+    {
+      "path": "src/context.ts",
+      "bytes": 1232,
+      "sha256": "d5ebd212ad1d916a61a8fd4fb84ef55f571e763885c7c77ceb020ccd4e6c3ef6"
+    },
+    {
+      "path": "src/domain.ts",
+      "bytes": 3697,
+      "sha256": "c9d4525d3c5ec9160cdca4975e9c55dd88b747913492972bf5a66aed6b39572c"
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 6332,
+      "sha256": "b81622225e5deba5611c25bc23b6b986a033cc63f112a10d47afcb1f06bee944"
+    },
+    {
+      "path": "src/public-json.ts",
+      "bytes": 1705,
+      "sha256": "c3b5bf4cd519263c9988b81ada6d41724b3060e9d65d42f23b91f65fe690daa2"
+    },
+    {
+      "path": "src/shell.ts",
+      "bytes": 9544,
+      "sha256": "0b27be7183aeee1ed41ad32d8ab1831542694cc633f0f7b948ab9065a9130812"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 5393,
+      "sha256": "85866e9e83ca47c6990fa8b76488ffa171768585695ec2d52cf159dfd86ca612"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "src/wallet.ts",
+      "bytes": 15498,
+      "sha256": "7d4868d82da3873f76ad54d8104d1b3cd47384fd0ace2927aaac874458c8ecdb"
+    },
+    {
+      "path": "tests/connect-events.test.ts",
+      "bytes": 6849,
+      "sha256": "09f57ea6da14c3baefbec27d50e6af49508e2b6795496a81a370325ea05c4a20"
+    },
+    {
+      "path": "tests/connect-shell.test.ts",
+      "bytes": 3463,
+      "sha256": "95f5786da306e0527805f724925d58677e0f9676cde00fbfaac9c98c0a97077d"
+    },
+    {
+      "path": "tests/context.test.ts",
+      "bytes": 1582,
+      "sha256": "40b1e4b0d5b25a92c61e61099df267fd4b084d2c74f7dc1341a69aa7bc71212e"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "bytes": 2199,
+      "sha256": "b8ec0601b934fd294432749ddf3da8016e55e6602dd430765123327c52dbc2be"
+    },
+    {
+      "path": "tests/mutation-alias.test.ts",
+      "bytes": 1806,
+      "sha256": "de692a7544cdd9ac11a004b5dd296d12f6f98d477881140eed3befacdfdd4f8d"
+    },
+    {
+      "path": "tests/one-shot-wallet.test.ts",
+      "bytes": 2886,
+      "sha256": "caffc0d921269ac2160610832fa4a1fad4d71afe6178a55d10727448c8b8fad8"
+    },
+    {
+      "path": "tests/public-json.test.ts",
+      "bytes": 680,
+      "sha256": "38e4f67f355894965583b07e3976afc1c866b62b09737cfcb2149994e6ba3199"
+    },
+    {
+      "path": "tests/public-studio-receipt.ts",
+      "bytes": 1008,
+      "sha256": "2b9d2c2dedb864c7fc334634ffff05988e4115eba74fb236ad5ac9c8533f2f7c"
+    },
+    {
+      "path": "tests/rpc-address.test.ts",
+      "bytes": 2929,
+      "sha256": "6309a256dd3a3184646bc04f67890c3039201e3646780e1ccfc9375b463fea47"
+    },
+    {
+      "path": "tests/stable-sdk.test.ts",
+      "bytes": 7867,
+      "sha256": "d62dcc97555baa2a7448995629ce2cc3a580a51e70bdc39ec96e715b4be8b445"
+    },
+    {
+      "path": "tests/ui-race.test.ts",
+      "bytes": 3874,
+      "sha256": "a1ece1a4b61817484e7f73bce0b29c274a1dd83a63366cd3ecebb69cd890b5da"
+    },
+    {
+      "path": "tests/wallet.test.ts",
+      "bytes": 12200,
+      "sha256": "d34d6ed08342f53bf1df69e4610fb38f2099c81dff63fa80aba1ce3f47c105b1"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 225,
+      "sha256": "4a71bf0d519cfc68771a7fbce06f7ff31cce7f83494f44e64454cbd14f838155"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 77,
+      "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968"
+    }
+  ],
+  "frontendSourceTreeSha256": "daac64e230136b8987fb9613801f7edc361f05142fd1571f2cef910c9af0a9d2",
+  "treeHashAlgorithm": "SHA256 of UTF8 Python json.dumps(frontendFiles, sort_keys=True, separators=(comma,colon)); paths relative to frontend, sorted ascending",
+  "distFiles": [
+    {
+      "path": "assets/ccip-UmXM1ApN.js",
+      "bytes": 2888,
+      "sha256": "b8ba76409564d403a9660dbc6cab28de68a4f9eb8e6b81aa4896a1963e054736"
+    },
+    {
+      "path": "assets/index-CqE3t7Ce.js",
+      "bytes": 554747,
+      "sha256": "16fa95c7696cc3387b5c8d27c103a6bab76473df6260b4b09494000b586d183a"
+    },
+    {
+      "path": "assets/index-jxh9bEt_.css",
+      "bytes": 5392,
+      "sha256": "b73ddefbcce578ccac51907696ba4fb4b2956c39d3217d5b569b1320fa714b76"
+    },
+    {
+      "path": "index.html",
+      "bytes": 355,
+      "sha256": "feba737fa911c85c441a8271f68307ed2b12333ff4d18441d27aaaaa2f2749d3"
+    }
+  ],
+  "immutableCandidateRoot": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\cluster-atlas\\evidence\\stable-sdk-2026-10-22\\candidate",
+  "contractAndAllFixtures": [
+    {
+      "path": "contract.py",
+      "bytes": 9915,
+      "sha256": "f56d06d4803c636ff0b7c17f6e56c22813833086ee92670ebca1256df3d86a14"
+    },
+    {
+      "path": "fixtures/metric.json",
+      "bytes": 429,
+      "sha256": "148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a"
+    },
+    {
+      "path": "fixtures/source.json",
+      "bytes": 550,
+      "sha256": "8a2a591a94b1a4b75b71b62c5a58185510255aa5af74d057206a981902ec78c2"
+    }
+  ],
+  "historicalArtifacts": [
+    {
+      "path": "cluster-atlas/PUBLISH_MANIFEST.json",
+      "bytes": 10763,
+      "sha256": "7863e6557721ee93c426de8e45a523c50a140d64fe8464126cf60e01677ca0ef"
+    },
+    {
+      "path": "cluster-atlas-publish.zip",
+      "bytes": 99689,
+      "sha256": "a776d91def26dfa19483ad911e6a17c29dcc93c45277b70de89ba11b3dea117d"
+    },
+    {
+      "path": "config-cohort/PUBLISH_MANIFEST.json",
+      "bytes": 10764,
+      "sha256": "f2fbc1d1242ffb590e77b366fe421bd133f65cf5ac7a7b411872c9c54c582798"
+    },
+    {
+      "path": "config-cohort-publish.zip",
+      "bytes": 100114,
+      "sha256": "c4c26ed81c1af81da18bdc909f8ca49413db8a4ada4832c50b33fa5b9c927790"
+    },
+    {
+      "path": "PUBLISH_MANIFEST.json",
+      "bytes": 2024,
+      "sha256": "5dcf60c8ff6c69951b576f520691deadc03753f905834841de8e70f1ae5bbd64"
+    }
+  ],
+  "allProtectedByteIdentitiesMatch": true,
+  "sdk": {
+    "exactPackage": "genlayer-js@1.1.8",
+    "actualInstalledPackage": {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\cluster-atlas\\frontend\\node_modules\\genlayer-js\\package.json",
+      "bytes": 2107,
+      "sha256": "bdb0b9a86827b392ad9b584a52158bf7b90ef9e4425e009f1f5c8a8d0e6f3662"
+    },
+    "officialSerializer": true,
+    "fiveAndSixInputEnvelopeTests": true,
+    "statusFinalizedFullTransactionPolling": true,
+    "readABI": "dictionary",
+    "persistence": "sessionStorage",
+    "officialPrimarySources": [
+      "https://raw.githubusercontent.com/genlayerlabs/genlayer-js/v1.1.8/src/abi/calldata/encoder.ts",
+      "https://raw.githubusercontent.com/genlayerlabs/genlayer-js/v1.1.8/src/contracts/actions.ts",
+      "https://raw.githubusercontent.com/genlayerlabs/genlayer-js/v1.1.8/src/transactions/actions.ts",
+      "https://raw.githubusercontent.com/genlayerlabs/genlayer-js/v1.1.8/package.json",
+      "https://docs.genlayer.com/developers/consensus-v06-migration"
+    ]
+  },
+  "oneShotInvariant": {
+    "maximumForwardedMutationCallsPerWrite": 1,
+    "permittedMutation": "eth_sendTransaction",
+    "permittedReads": [
+      "eth_accounts",
+      "eth_chainId"
+    ],
+    "otherProviderMethodsRejectedLocally": true,
+    "guardBeforeForward": [
+      "originalAccount",
+      "chain",
+      "providerIdentity"
+    ],
+    "clearOnlyFirstActualProvider4001": true,
+    "unknownNoHashSurvivesFallbackAndReload": true
+  },
+  "receiptEvidence": {
+    "originalHashSenderRecipientValueBinding": true,
+    "rawFinalizedNormalNonLeaderOnlyMajorityUniqueLeaderSuccess": true,
+    "suppliedSDKConflictsFailClosed": true,
+    "fullObjectsValidatedInRAM": true,
+    "publicProjectionOnly": true,
+    "noNodeConfigOrSDKRawOrVMOutput": true,
+    "missingFieldsNotSynthesized": true
+  },
+  "checks": {
+    "frontend": {
+      "passed": 124,
+      "exitCode": 0,
+      "log": "frontend-final.log"
+    },
+    "build": {
+      "exitCode": 0,
+      "log": "build-final.log",
+      "command": "pnpm build (tsc --noEmit and vite build)"
+    },
+    "actualContractSDK": {
+      "passed": 34,
+      "exitCode": 0,
+      "log": "actual-sdk-tests.log",
+      "runner": "GenVMv0.2.12 / 1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+      "externalInputsExplicitlyMocked": true
+    },
+    "logFiles": [
+      {
+        "path": "actual-sdk-tests.log",
+        "bytes": 854,
+        "sha256": "ae8167773e0daa71fdc53a9fcce9ef17e5000d9ef62887693da06305ec1a17da"
+      },
+      {
+        "path": "build-final.log",
+        "bytes": 772,
+        "sha256": "98943ac5a40d440218eb5465516039f92aa89377b6d051024b1bd7e2a543c1aa"
+      },
+      {
+        "path": "fallback-one-shot-corrected-red.log",
+        "bytes": 15557,
+        "sha256": "5a300a3068233edc332075af8ad48c97e358e9eb128e874140dc5269d424fbac"
+      },
+      {
+        "path": "fallback-one-shot-red.log",
+        "bytes": 2658,
+        "sha256": "c4173eda01e82eaf492fc01895f64724fe273e3ea5f74e29c445236c48a0eb32"
+      },
+      {
+        "path": "first-frontend-green.log",
+        "bytes": 18810,
+        "sha256": "6d07f70d7929ee7c9832ac4e7f46fd4a0ebd0e0157f79761e7cbc82ceed04a15"
+      },
+      {
+        "path": "frontend-final.log",
+        "bytes": 18795,
+        "sha256": "f8f259b9abe4444dd0c07f55b2c16c46b9063377db6ce087f00df61ac5e0f4ca"
+      },
+      {
+        "path": "install.log",
+        "bytes": 555,
+        "sha256": "4baa0ce65b713be5822a4d934a7555928ce17cded6687f6b8a129bd865dfd0ad"
+      },
+      {
+        "path": "rc2-red.log",
+        "bytes": 27734,
+        "sha256": "0b048558c152a579442d746fc102909d93792e77d694b443dc43f313de42924b"
+      }
+    ]
+  },
+  "independentPeer": {
+    "status": "pending",
+    "reviewer": null
+  },
+  "oldPeerAppliesToNewFrontend": false,
+  "contractChanged": false,
+  "fixturesChanged": false,
+  "newZIPCreated": false,
+  "uiOrWalletOperations": false,
+  "externalRPCOperations": false,
+  "publicationPerformed": false,
+  "businessLiveFlowVerified": false
+}

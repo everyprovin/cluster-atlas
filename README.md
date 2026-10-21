@@ -1,5 +1,24 @@
 # ClusterAtlas
 
+## Deployment and frontend status
+
+The original zero-argument contract deployment, public source fixture and GitHub Pages site exist. The constructor is recorded as finalized with successful execution; the wallet business lifecycle has **not** been verified live. This application remains an AI-assisted experimental prototype with synthetic public inputs, no real-world decision or adoption claim.
+
+| Recorded public fact | Value |
+| --- | --- |
+| Network | GenLayer Studio, chain 61999 |
+| Contract | `0x3cB07E202CFA03F3174080c101a63b923fC79515` |
+| Constructor arguments | `[]` |
+| Constructor transaction | `0xcab161b68c9aa7f5fbe6a0e839016cd85783e75012c2384fa972d3ffafdcbe73` |
+| Contract source SHA-256 | `f56d06d4803c636ff0b7c17f6e56c22813833086ee92670ebca1256df3d86a14` |
+| Repository | [https://github.com/everyprovin/cluster-atlas](https://github.com/everyprovin/cluster-atlas) |
+| Earlier published repository commit | `102996a33f43479b37594a5b9fe95bc8a2c9a849` |
+| Website | [https://everyprovin.github.io/cluster-atlas/](https://everyprovin.github.io/cluster-atlas/) |
+| Exact public synthetic fixture | [Immutable source](https://raw.githubusercontent.com/everyprovin/cluster-atlas/ee331c9e9b1ddfa0f5847ef38f793dc045bcb026/profile05/projects/cluster-atlas/fixtures/metric.json) |
+| Exact fixture SHA-256 | `148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a` |
+
+The [constructor deployment record](evidence/constructor-deployment-record-001.json) preserves the original observed evidence and its field names. Constructor success and an existing hosted page do not establish lock → derive → confirm success, a current certificate, revocation, real users or an accepted contribution. No new constructor deployment is required by the frontend compatibility changes.
+
 A metric validator and canonical minimum-spanning-tree explorer with interactive single-linkage thresholds.
 
 This is one complete original GenLayer Project: contract, independent validator, interactive frontend, original MIT synthetic fixtures, tests and reproducible evidence. Do not count its bundled contract separately as an Intelligent Contract contribution.
@@ -28,12 +47,25 @@ The constructor takes **zero arguments**. Use GenVM **v0.2.12**, runner `py-genl
 
 Source schema and bounds are specified in DESIGN.md. Unknown fields, duplicate keys and IDs, invalid types and resource bounds are rejected. Downloaded responses must be HTTP 200 and 1..32768 bytes, and byte SHA-256 must match. The byte bound is checked after download; it is not a bandwidth or redirect control. Validators independently fetch, validate and recompute the entire bound packet. They reject forged binding, result and changed-byte proposals. No LLM is used.
 
+## Current frontend and verification
+
+Frontend revision 002 uses the unchanged official `genlayer-js@1.1.8`, the Stable Studio method-key ABI and actual dictionary views. Writes use zero transaction value, the intended account, exact target and chain 61999. The application performs no hosted worker or automatic real-world action.
+
+Public SDK/provider/RPC failures use fixed UNVERIFIED diagnostics rather than exception text. Receipt data is projected only after the complete original SDK/raw proof succeeds. Every supplied SDK leader list must contain exactly one successful leader; missing SDK fields remain missing and never replace the independent raw proof. A final provider-identity check prevents a replaced provider from being adopted during connection. Record, address or wallet context changes clear receipt display, and late callbacks cannot leave an old receipt beside a different loaded record.
+
+The exact local revision passed **137 frontend tests**, TypeScript and Vite. The recorded pinned contract SDK suite passed **34 tests**. [Fresh independent peer review](evidence/frontend-stable-revision-002/independent-review.json) separately reran this package’s full frontend suite and rebuilt matching assets; across its four-package scope it also executed 112 focused boundary checks. These checks use fictional DOM/provider/RPC I/O and real production modules with the installed official SDK. They are offline verification, not live wallet or network consensus evidence. No real credentials were used.
+
+The application preserves one underlying wallet mutation per submission. An unknown result, including an error before a hash is available, blocks another send. Public observation metadata stays in session storage; reconnect the original account and observe the original transaction, or attach its exact wallet-activity hash if it was missing. Only a confirmed first actual wallet rejection clears an unsubmitted intent. Removing browser storage or using another tab cannot preserve a local replay guard.
+
+Earlier verification files and revision notes describe local checks at their recorded time. The original bundled `fixtures/source.json` still contains its test locator and a null `public_url`; that unchanged test metadata is not a claim that the separately published fixture above is absent. The UI intentionally starts without a deployment address. Enter the recorded contract and the exact pinned fixture URL/digest to inspect that deployment. Local edits and JSON export do not publish source or mutate chain state.
+
+An earlier wallet attempt on this hosted origin was canceled after a security warning. Compatibility fixes and local peer review do not prove a warning false or constitute approval to bypass it. No completed live business wallet flow, live certificate/revocation, independent human operation, adoption, payment, award or accepted Project submission is claimed.
+
 ## Reproduce locally
 
-Run commands **inside this package directory**; gltest owns its current-working-directory `artifacts` folder. With Python 3.12, create a local environment and install `requirements.txt`, then run:
+From this package directory, install the pinned Python dependencies and run `python tools/verify.py`. This exercises the direct GenVM SDK, validators and schema/semantic checks with controlled public inputs. Then:
 
 ```powershell
-python tools/verify.py
 Set-Location frontend
 pnpm install --frozen-lockfile
 pnpm test
@@ -41,24 +73,4 @@ pnpm build
 pnpm dev
 ```
 
-`tools/verify.py` executes actual pinned SDK/storage/validator tests and official semantic/lint/schema checks. `tests/conftest.py` only works around upstream Windows fd0 file cleanup and warp metadata refresh; no contract logic is stubbed. HTTP responses are controlled test inputs. Direct tests do not prove network multi-validator consensus, gas cost or deployment. `python tools/verify_frontend.py` records frontend test, TypeScript and Vite exit codes and hashes.
-
-## Public source and deployment setup
-
-`fixtures/source.json` separates `test_url` from `public_url`. The test locator is explicitly synthetic; **public_url is null**. No contract address is preconfigured. To use an independent deployment, publish **exact original fixture bytes** at an immutable raw GitHub commit URL ending in `/profile05/projects/cluster-atlas/fixtures/metric.json`, verify SHA-256 `148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a`, deploy `contract.py` with zero arguments on Stable Studio 61999, then enter its real address and the actual source URL in the UI.
-
-The frontend offers local policy/metric edits and JSON export with exact UTF-8 LF byte digest. Exporting does not publish a file or change the chain. Edited previews need their own published bytes and digest. Chain reads validate source and recompute returned results before drawing them. Local previews and loaded chain results are labeled separately.
-
-## Wallet evidence and recovery
-
-The frontend uses actual `genlayer-js@2.0.0-rc.2`, injected MetaMask, actual network/account checks and zero-value writes. The SDK observation is requested at finalized full-transaction state. Studio can omit train execution fields, and the actual viem formatter turns numeric zero into undefined. Regression tests exercise the real SDK helper and formatter on a captured public constructor receipt; this is **not live business-write verification**. Missing fields remain missing.
-
-Before reading updated state, an independent unformatted public `eth_getTransactionByHash` response must match the exact hash, sender, contract and zero value, and report FINALIZED / NORMAL / leader_only=false / MAJORITY_AGREE with exactly one current leader whose execution_result is SUCCESS. Every available SDK execution/binding/status field must agree. Validator IDLE or nonfatal quorum messages do not replace leader evidence. Missing, conflicting or failed evidence remains pending and blocks submission.
-
-Pending address, original account, record ID, method and hash are saved in session storage; no keys or secrets are stored. Reloading the same tab restores observation metadata. Reconnect the original wallet and choose **Observe same transaction**. A network error before the hash is known also blocks replay; attach the exact hash from wallet activity and observe it. Explicit wallet rejection code 4001 clears an unsubmitted operation. The application never automatically retries a write. Browser storage removal or a separate browser session cannot preserve a local guard, so keep the transaction ID.
-
-Busy operations disable all configuration inputs. Both the loaded record and each action are bound to the visible address/record ID; stale async responses are discarded even if a programmatic value change bypasses disabled inputs. Actual page-handler tests cover loading A while the visible ID changes to B.
-
-## Status and limitations
-
-The recorded local suite contains 34 actual SDK tests and 54 frontend tests. All current full-check results and exact source/frontend hashes are in evidence. The frontend builds with a Vite size notice for the real SDK bundle (>500 kB before compression). Browser visual QA, public fixture publication, contract deployment, hosting, live wallet business flow, actual users, financing and awards remain **null / unverified**. Independent peer review is recorded separately. This prototype is not a real-world service or authorization system.
+The Vite SDK bundle emits a size notice above 500 kB before compression. The prototype certifies only the declared synthetic source and deterministic model. Public web hosting, direct SDK tests, constructor execution and business lifecycle verification are distinct evidence categories.

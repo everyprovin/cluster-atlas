@@ -1,0 +1,263 @@
+{
+  "schema": "genlayer.frontend.stable-sdk.initial-independent-peer.v1",
+  "at": "2026-10-21T18:14:36.153696+00:00",
+  "reviewer": "/root/genlayer_contract_pair02",
+  "author": "/root/genlayer_projects05",
+  "status": "changes_requested",
+  "scope": "ONLY frozen01 ranked-agenda/fair-share-board and05 config-cohort/cluster-atlas SDK001 frontend revisions. Actual Wallet/SDK/provider/HTTP boundary and UI error integration, strict raw/SDK original proof, persistence and RevealVault/export source, event and checksum boundary, artifact and log review. No mutable02/03/04/06 candidates included. No author files changed, no UI/CDP, no real network/RPC/wallet/publication/central.",
+  "inputs": [
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\project-frontends-stable-sdk-010203-revision-001.json",
+      "bytes": 5191,
+      "sha256": "1898fda1c901c063453316f41dc258b9cbcf06f44776592eaf70f468fa93d514"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\project-frontends-stable-sdk-010203-complete-upload-manifest-001.json",
+      "bytes": 139211,
+      "sha256": "537bc23b686d5ad354eb576673e0f6a04bbf3325a38dcdb7ac6be5e86b60e9a6"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\project-frontends-stable-sdk-040506-revision-001.json",
+      "bytes": 5175,
+      "sha256": "bd711f0375751eae8fb8ec2d9de797ba5d246c68dac0b3a1f49dde2036fd1f24"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\project-frontends-stable-sdk-040506-upload-manifest-001.json",
+      "bytes": 89465,
+      "sha256": "6fe94b2c8f0f91ba6df332eed66b35942c2cb04fd8a9030affc3855b84c02336"
+    }
+  ],
+  "actualPackageNames": [
+    "ranked-agenda",
+    "fair-share-board",
+    "config-cohort",
+    "cluster-atlas"
+  ],
+  "findings": [
+    {
+      "id": "0105-PUBLIC-SDK-ERROR-DOM",
+      "priority": 2,
+      "importance": "Important",
+      "affected": [
+        "ranked-agenda",
+        "fair-share-board",
+        "config-cohort",
+        "cluster-atlas"
+      ],
+      "summary": "Actual SDK/provider unknown error text reaches public UI rather than a fixed public diagnostic.",
+      "source": "Unmodified SDK1.1.8 propagates the synthetic original-provider Error message after a single mutation attempt.",
+      "path": "Actual Wallet.act -> official SDK -> actual ui.run(01) or shell.run(05) -> status/notice/trail textContent",
+      "control": "01 only redacts isolated64hex strings; arbitrary nonhex diagnostic strings remain.05 forwards Error.message directly.",
+      "evidence": "All4 actual Wallet+SDK+UI integration cases display the fictional sentinel; no synthetic DOM/setup failure. Pending remains unknown and no extra mutation is forwarded.",
+      "counterevidence": "No real credential was accessed or observed. Random synthetic RevealVault salt was neither stored nor displayed in this concrete run; do not claim a demonstrated salt/real-secret leak.",
+      "recommendation": "Use fixed or explicitly whitelisted UNVERIFIED public errors for SDK/RPC/provider exceptions; do not dump message/cause/raw response. Preserve original pending/hash and never resend. Test actual UI read/write/resume failure paths."
+    },
+    {
+      "id": "05-EXPLICIT-EMPTY-SDK-LEADER",
+      "priority": 2,
+      "importance": "Important",
+      "affected": [
+        "config-cohort",
+        "cluster-atlas"
+      ],
+      "summary": "An explicitly supplied empty SDK leader list is accepted and pending clears after a valid independent raw packet.",
+      "source": "First actual eth_getTransactionByHash controlled packet gives SDK consensus_data.leader_receipt=[]; second independent raw response supplies a successful bound leader.",
+      "path": "SDK formatter -> assertSDK leaders.length>1 -> WalletSession.observe -> pending=null",
+      "evidence": "Both05 actual Wallet+unmodified SDK cases complete and clear pending; both01 strict cases reject/retain the same supplied[] evidence.",
+      "counterevidence": "Raw sender/hash/target/value0/FINALIZED/NORMAL/majority/unique-success requirements remain mandatory; a wrong or failed raw transaction is not accepted.",
+      "recommendation": "For supplied SDK leader evidence require exactly one successful leader; distinguish absent evidence from explicit[], validator-only, malformed, multiple or failed lists. Add actual SDK plus raw paired packet regressions."
+    }
+  ],
+  "minor": [
+    {
+      "id": "05-LATE-CONNECT-PROVIDER-IDENTITY",
+      "priority": 3,
+      "affected": [
+        "config-cohort",
+        "cluster-atlas"
+      ],
+      "summary": "connect adopts the old provider response even when getProvider changes during its final eth_accounts await.01 rejects the equivalent race.",
+      "evidence": "Independent controlled provider replacement case: both05 accepted/accountAdopted=true; both01=false.",
+      "counterevidence": "The replacement in this case reports the same account/chain.05 still rereads original account/chain/provider before forwarding a mutation; no wrong signer or extra send was demonstrated.",
+      "recommendation": "Consider checking this.getProvider()===p before adopting connected context, matching the other adapters and the submission guard."
+    }
+  ],
+  "positiveEvidence": {
+    "actualOfficialSDK": "Exact unmodified1.1.8 runtime SHA577032b22e6077b671a7d27ba8d6dac58eb90ed5892f2a05b11eefc6eef29dd2 independently matched all4.",
+    "read": "All4 actual SDK reads use a method key, checksum transport address and preserve dict views.",
+    "write": "All4 normal actual Wallet SDK calls make one five-parameter consensus mutation with matching sender/recipient/method/value0.",
+    "sixParameterCompatibility": "All4 installed official SDKs independently construct their documented six-parameter envelope with validUntil, with no custom serializer.",
+    "polling": "All4 actual SDK wait calls pass ACCEPTED and return FINALIZED with full leader evidence, interval0/retries2 test-only.",
+    "oneShotUnknown": "Actual unknown and ABI-fallback literal each forward one original mutation; hashless original metadata survives fresh Wallet construction and blocks another act.",
+    "firstActual4001": "Actual first original-provider4001 clears pending; no second original mutation.",
+    "rawAndSDKBindings": "Wrong SDK sender, wrong raw sender/value, failed raw leader reject and retain exact original hash across reload in all4; valid proof completes.",
+    "providerEvents": "Delayed unchanged chain/accounts events preserve connection; actual chain change drops it in all4.",
+    "normalReceiptDisplay": "01 and05 set evidence only after full raw+SDK RAM proof. There is no standalone arbitrary-hash Inspect path; observation uses saved original context.",
+    "RevealVault": "Actual RankedAgenda prepare/false-export rejection/explicit export/bound import/wrong-account rejection verified with RAM-only random synthetic material. Persistent local public pending contains neither nonce nor private ranking. Salt was not written to audit artifacts.",
+    "exports": "Static01 private download requires explicit acknowledgement and warning;05 exports validated synthetic source JSON+digest, not raw receipt objects.",
+    "storageBoundaries": "01 public metadata uses strict allowed keys and throws when storage fails;05 session guard remains RAM-only when storage is unavailable, an existing disclosed local-guard limit. No guarantee against cleared storage or unrelated tabs is made."
+  },
+  "artifactChecks": {
+    "checks": 578,
+    "issues": [],
+    "currentCandidateBaselineProtectedHistoryAndUploadHashSizesMatched": true,
+    "all4TreesIndependentlyRecomputed": true,
+    "authorFrontendLogTotal": 476,
+    "authorActualContractSDKLogTotal": 124,
+    "all4AuthorBuildLogsGreenAndHashBound": true,
+    "uploadCounts": [
+      41,
+      40,
+      27,
+      27
+    ],
+    "publicationPlanNote": "01 has a complete current frontend set.05 upload001 is expressly a delta requiring the exact baseline/full payload merge for a new repo. Do not treat either as permission or evidence to overlay an unverified remote or claim hosting/live."
+  },
+  "independentlyExecuted": {
+    "actualWalletSDKRuntimeCases": 52,
+    "actualSDKToUIDiagnosticCases": 4,
+    "RevealVaultChecks": {
+      "falseExportDenied": true,
+      "explicitExportContainsSalt": true,
+      "boundImportMatches": true,
+      "wrongAccountImportRejected": true,
+      "pendingStorageContainsSalt": false,
+      "pendingStorageContainsPrivateRanking": false,
+      "privateMaterialRetainedInRam": true
+    },
+    "officialSixEnvelopeCases": 4,
+    "officialFinalizedPollingCases": 4,
+    "allControlledOffline": true,
+    "realCredentialsOrWalletsUsed": false,
+    "authorFullFrontendSuitesRerun": false,
+    "authorBuildsRerun": false,
+    "contractSuitesRerun": false
+  },
+  "testCalibration": {
+    "firstHarnessAttempt": "Initial001 review script used the wrong local public fixture filename for01 and stopped before testing; fixed in002/003 without source mutation.",
+    "rawExtensionCase": "Review002 initially labeled tx_execution_result:999 as an expected SDK conflict. Local official decoder inspection showed it is an unknown raw extension, not the supplied SDK numeric field; corrected003 treats its omission as legitimate. It is not a source finding.",
+    "SDKConsole": "Controlled official SDK console output was suppressed/limited in the harness. This does not alter production code or assert that upstream SDK logs are sanitized."
+  },
+  "identitiesAndLocations": [
+    {
+      "profile": "01",
+      "project": "ranked-agenda",
+      "frontendTree": "408369a5fea5ea9ade8657cf85042e7076d7d475520f727f3347bf2a839031e0",
+      "locations": [
+        {
+          "tag": "connectFinalContext",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile01\\projects\\ranked-agenda\\frontend\\src\\wallet.ts",
+          "line": 31
+        },
+        {
+          "tag": "publicErrorSink",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile01\\projects\\ranked-agenda\\frontend\\src\\ui.ts",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "profile": "01",
+      "project": "fair-share-board",
+      "frontendTree": "cf2101de7f248818f5f91bc1326ebfe7b1c62b97c1d24c8793b65fa7c040b9ad",
+      "locations": [
+        {
+          "tag": "connectFinalContext",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile01\\projects\\fair-share-board\\frontend\\src\\wallet.ts",
+          "line": 31
+        },
+        {
+          "tag": "publicErrorSink",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile01\\projects\\fair-share-board\\frontend\\src\\ui.ts",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "profile": "05",
+      "project": "config-cohort",
+      "frontendTree": "64857540a8331c72dba1b8d8c08b63280ed24c1aa71daced033d0eb7da13aa1a",
+      "locations": [
+        {
+          "tag": "providedSdkLeaderCount",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\config-cohort\\frontend\\src\\wallet.ts",
+          "line": 55
+        },
+        {
+          "tag": "connectFinalContext",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\config-cohort\\frontend\\src\\wallet.ts",
+          "line": 69
+        },
+        {
+          "tag": "publicErrorSink",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\config-cohort\\frontend\\src\\shell.ts",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "profile": "05",
+      "project": "cluster-atlas",
+      "frontendTree": "daac64e230136b8987fb9613801f7edc361f05142fd1571f2cef910c9af0a9d2",
+      "locations": [
+        {
+          "tag": "providedSdkLeaderCount",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\cluster-atlas\\frontend\\src\\wallet.ts",
+          "line": 55
+        },
+        {
+          "tag": "connectFinalContext",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\cluster-atlas\\frontend\\src\\wallet.ts",
+          "line": 69
+        },
+        {
+          "tag": "publicErrorSink",
+          "file": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\contributions\\genlayer-2026-10-21\\profile05\\projects\\cluster-atlas\\frontend\\src\\shell.ts",
+          "line": 22
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\project-frontends-0105-independent-artifact-audit-001.json",
+      "bytes": 5381,
+      "sha256": "1dddb56501e82a5d664fcec05af7908cc38a515bd436ea72c1201c4803cd4c56"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\project-frontends-0105-independent-runtime-peer-003.json",
+      "bytes": 19028,
+      "sha256": "758eab6f9527389357db9e80138d9e84740b19b6ecf42b6b0a1e5fcfd586e86a"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\project-frontends-0105-independent-official-sdk-extra-001.json",
+      "bytes": 2275,
+      "sha256": "d49e0084258f820bc50581f4673deb05bc2ec38ce351e59215acfc80012d89b2"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\peer-projects-0105-stable-runtime-003.mjs",
+      "bytes": 13171,
+      "sha256": "6449bc9bcedc58b8dffd1498ac77e8ae32dd8a3819e70e3088764cd1ec549e68"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\web3\\outputs\\genlayer-builders-2026-10-21\\peer-projects-0105-official-sdk-extra-001.mjs",
+      "bytes": 4101,
+      "sha256": "fd66b6c29b83c8c91b9e6a246f47bc71041de6895221136e9e03fd5f0def9bbf"
+    }
+  ],
+  "notCovered": [
+    "No browser visual session, actual MetaMask confirmation, public RPC, live consensus, deployment, hosting or submission.",
+    "No full domain/contract algorithm audit; original business source and fixture identities and author SDK logs were checked.",
+    "No independent rerun of all476 frontend/124 contract SDK tests or four builds; those are author log counts, not reviewer execution.",
+    "No fresh full adversarial SDK/RPC/provider fuzz suite, full persistence-failure/recovered malformed-storage matrix, or deployed browser event-timing campaign.",
+    "No review approval inherited from07, Builder05 limited scope or other Projects.",
+    "01 actual second project is FairShareBoard; GrantForge is not in the frozen list."
+  ],
+  "counts": {
+    "Critical": 0,
+    "Important": 2,
+    "Minor": 1
+  },
+  "noAuthorSourceModification": true,
+  "newPublicationOrLiveApproved": false
+}
