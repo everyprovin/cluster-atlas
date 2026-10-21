@@ -1,0 +1,10 @@
+{
+  "license": "MIT",
+  "synthetic": true,
+  "pii": false,
+  "test_url": "https://raw.githubusercontent.com/fixture-lab/genlayer-profile05/0000000000000000000000000000000000000000/profile05/projects/cluster-atlas/fixtures/metric.json",
+  "public_url": null,
+  "sha256": "148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a",
+  "publication": null,
+  "note": "test_url is an explicit test locator, not evidence that these bytes are published. Replace with the real immutable public commit URL only after independent byte verification."
+}

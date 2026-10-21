@@ -1,0 +1,62 @@
+WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks
+INFO: Clearing artifacts directory: artifacts
+INFO: Using the following configuration:
+INFO:   RPC URL: http://127.0.0.1:4000/api
+INFO:   Selected Network: localnet
+INFO:   Available networks: ['localnet', 'studionet', 'testnet_asimov', 'testnet_bradbury']
+INFO:   Selected chain type: localnet
+INFO:   Available chains: localnet, studionet, testnet_asimov, testnet_bradbury
+INFO:   Contracts directory: contracts
+INFO:   Artifacts directory: artifacts
+INFO:   Environment: .env
+INFO:   Default wait interval: 3000 ms
+INFO:   Default wait retries: 50
+INFO:   Leader only mode: False
+...............................F.                                        [100%]
+================================== FAILURES ===================================
+_____________ test_duplicate_json_and_threshold_state_boundaries ______________
+
+direct_vm = VMContext(_sender=b'\xdc\x18\xaa=\xb8\xbc\x91\xa6\xe3\x90\xa3^}\x08\x11$o\xf3\xab\x01', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x000001FB84D87920>
+
+    def test_duplicate_json_and_threshold_state_boundaries(direct_vm,direct_deploy):
+        c=deploy(direct_vm,direct_deploy)
+        with direct_vm.expect_revert('duplicate'):lock(direct_vm,c,BODY.replace('"schema":','"schema":"duplicate", "schema":',1))
+>       lock(direct_vm,c)
+
+tests\test_contract.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_contract.py:22: in lock
+    c.lock_source('demo',SOURCE['test_url'],hashlib.sha256(body.encode()).hexdigest())
+..\..\..\tooling\.venv\Lib\site-packages\gltest\direct\loader.py:432: in _wrapped
+    return attr(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+contract.py:151: in lock_source
+    packet=_capture(source_url,source_sha256,self._binding(record,'lock'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+contract.py:126: in _capture
+    return gl.vm.run_nondet_unsafe(leader,validator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\tooling\.venv\Lib\site-packages\gltest\direct\loader.py:161: in _direct_run_nondet_unsafe
+    result = leader_fn()
+             ^^^^^^^^^^^
+contract.py:117: in leader
+    source=_fetch(url,digest)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+url = 'https://raw.githubusercontent.com/fixture-lab/genlayer-profile05/0000000000000000000000000000000000000000/profile05/projects/cluster-atlas/fixtures/metric.json'
+digest = '148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a'
+
+    def _fetch(url: str,digest: str) -> dict:
+        response=gl.nondet.web.get(url,headers={'Accept':'application/json'})
+        if response.status!=200 or response.body is None or not 1<=len(response.body)<=32768:
+            raise gl.vm.UserError('[SOURCE] source unavailable or oversized')
+        if hashlib.sha256(response.body).hexdigest()!=digest:
+>           raise gl.vm.UserError('[SOURCE] source byte SHA256 mismatch')
+E           genlayer.gl.vm.UserError: UserError(message='[SOURCE] source byte SHA256 mismatch')
+
+contract.py:58: UserError
+=========================== short test summary info ===========================
+FAILED tests/test_contract.py::test_duplicate_json_and_threshold_state_boundaries
+1 failed, 32 passed in 4.41s

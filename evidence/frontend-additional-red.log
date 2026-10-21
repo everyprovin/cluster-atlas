@@ -1,0 +1,79 @@
+$ vitest run
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ✓ tests/context.test.ts (4 tests) 12ms
+ ✓ tests/public-json.test.ts (2 tests) 16ms
+ ✓ tests/domain.test.ts (7 tests) 26ms
+ ✓ tests/ui-race.test.ts (3 tests) 2223ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  2161ms
+ ❯ tests/wallet.test.ts (36 tests | 3 failed) 118ms
+   ✓ characterizes actual SDK helper and viem formatter against a captured public Studio shape 6ms
+   ✓ decodes an actual SDK dictionary view and preserves errors 12ms
+   ✓ rejects a mismatched decoded dictionary boundary: null 1ms
+   ✓ rejects a mismatched decoded dictionary boundary: %j 1ms
+   ✓ rejects a mismatched decoded dictionary boundary: 42 1ms
+   ✓ rejects a mismatched decoded dictionary boundary: true 1ms
+   ✓ rejects a mismatched decoded dictionary boundary: "{\"revision\":1}" 1ms
+   ✓ blocks wrong chain or changed account before submission 3ms
+   ✓ rejects a missing deployment and mutable or cross-project source before signing 4ms
+   ✓ proves finalized raw leader success before reading, even when SDK formatter is unavailable 6ms
+   ✓ retains unknown evidence and never refreshes/resubmits: hash 3ms
+   ✓ retains unknown evidence and never refreshes/resubmits: sender 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: target 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: nonzero 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: booleanzero 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: missingvalue 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: mode 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: leaderonly 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: majority 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: pending 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: noleader 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: duplicateleader 2ms
+   ✓ retains unknown evidence and never refreshes/resubmits: leadererror 2ms
+   ✓ rejects conflicting available SDK fields { statusName: 'PENDING' } 2ms
+   ✓ rejects conflicting available SDK fields { hash: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee' } 1ms
+   ✓ rejects conflicting available SDK fields { from_address: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' } 1ms
+   ✓ rejects conflicting available SDK fields { to_address: '0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb' } 1ms
+   ✓ rejects conflicting available SDK fields { value: 1n } 1ms
+   ✓ rejects conflicting available SDK fields { txExecutionResultName: 'FINISHED_WITH_ERROR' } 1ms
+   ✓ persists exact pending metadata and resumes after reload without write replay 3ms
+   ✓ retains unknown submission without hash and allows bound observation only 2ms
+   ✓ clears a user-rejected signature but preserves a pending read failure 2ms
+   ✓ does not observe a pending hash under another wallet account 1ms
+   × rejects an additional conflicting available SDK receipt field 32ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+   × rejects an additional conflicting available SDK receipt field 4ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+   × rejects an additional conflicting available SDK receipt field 3ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/wallet.test.ts > rejects an additional conflicting available SDK receipt field
+ FAIL  tests/wallet.test.ts > rejects an additional conflicting available SDK receipt field
+ FAIL  tests/wallet.test.ts > rejects an additional conflicting available SDK receipt field
+AssertionError: promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "record_id": "demo",
++   "revision": 1,
+  }
+
+ ❯ tests/wallet.test.ts:31:327
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+
+ Test Files  1 failed | 4 passed (5)
+      Tests  3 failed | 49 passed (52)
+   Start at  06:47:01
+   Duration  4.38s (transform 1.36s, setup 0ms, collect 3.37s, tests 2.40s, environment 2ms, prepare 3.91s)
+
+[ELIFECYCLE] Test failed. See above for more details.

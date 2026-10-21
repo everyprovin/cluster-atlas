@@ -1,0 +1,13 @@
+$ vitest run
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ✓ tests/context.test.ts (4 tests) 11ms
+ ✓ tests/domain.test.ts (7 tests) 23ms
+ ✓ tests/wallet.test.ts (33 tests) 44ms
+
+ Test Files  3 passed (3)
+      Tests  44 passed (44)
+   Start at  06:43:02
+   Duration  3.00s (transform 660ms, setup 0ms, collect 1.89s, tests 77ms, environment 2ms, prepare 1.74s)
+

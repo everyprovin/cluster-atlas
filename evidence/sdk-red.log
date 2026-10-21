@@ -1,0 +1,44 @@
+WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks
+INFO: Clearing artifacts directory: artifacts
+INFO: Using the following configuration:
+INFO:   RPC URL: http://127.0.0.1:4000/api
+INFO:   Selected Network: localnet
+INFO:   Available networks: ['localnet', 'studionet', 'testnet_asimov', 'testnet_bradbury']
+INFO:   Selected chain type: localnet
+INFO:   Available chains: localnet, studionet, testnet_asimov, testnet_bradbury
+INFO:   Contracts directory: contracts
+INFO:   Artifacts directory: artifacts
+INFO:   Environment: .env
+INFO:   Default wait interval: 3000 ms
+INFO:   Default wait retries: 50
+INFO:   Leader only mode: False
+F
+================================== FAILURES ===================================
+________________ test_owner_revision_revoke_and_permanent_ids _________________
+
+direct_vm = VMContext(_sender=b'\xdc\x18\xaa=\xb8\xbc\x91\xa6\xe3\x90\xa3^}\x08\x11$o\xf3\xab\x01', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x00000277F52D3BA0>
+
+    def test_owner_revision_revoke_and_permanent_ids(direct_vm,direct_deploy):
+>       c=deploy(direct_vm,direct_deploy);lock(direct_vm,c)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contract.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+vm = VMContext(_sender=b'\xdc\x18\xaa=\xb8\xbc\x91\xa6\xe3\x90\xa3^}\x08\x11$o\xf3\xab\x01', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+build = <function direct_deploy.<locals>._deploy at 0x00000277F52D3BA0>
+
+    def deploy(vm,build):
+        vm.warp('2026-10-21T00:00:00Z')
+        c=build(str(ROOT/'contract.py'),sdk_version='v0.2.12')
+>       assert hasattr(c,'lock_source'),'lock_source API not implemented'
+E       AssertionError: lock_source API not implemented
+E       assert False
+E        +  where False = hasattr(<CalldataProxy for <_contract_contract.ClusterAtlas object at 0x00000277F53988F0>>, 'lock_source')
+
+tests\test_contract.py:14: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_contract.py::test_owner_revision_revoke_and_permanent_ids
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed in 0.74s

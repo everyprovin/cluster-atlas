@@ -1,0 +1,16 @@
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ✓ tests/context.test.ts (4 tests) 12ms
+ ✓ tests/public-json.test.ts (2 tests) 21ms
+ ✓ tests/domain.test.ts (7 tests) 24ms
+ ✓ tests/wallet.test.ts (38 tests) 55ms
+ ✓ tests/ui-race.test.ts (3 tests) 1287ms
+   ✓ actual page disables every configuration input while loading and discards delayed A after visible ID B  1243ms
+
+ Test Files  5 passed (5)
+      Tests  54 passed (54)
+   Start at  06:53:37
+   Duration  2.87s (transform 1.08s, setup 0ms, collect 2.43s, tests 1.40s, environment 3ms, prepare 2.85s)
+
+$ vitest run

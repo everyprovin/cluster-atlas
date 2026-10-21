@@ -1,0 +1,22 @@
+import {beforeEach,expect,it,vi} from 'vitest';
+import source from '../../fixtures/source.json';
+import fixture from '../../fixtures/metric.json';
+const m=vi.hoisted(()=>({read:vi.fn(),act:vi.fn()}));
+const account='0x'+'b'.repeat(40),address='0x'+'a'.repeat(40);
+vi.mock('../src/wallet',async original=>({...await original<typeof import('../src/wallet')>(),WalletSession:class{account=account;pending=null;evidence=null;read=m.read;act=m.act;subscribe(){}async connect(){return account;}async resume(){return m.read();}attachHash(){}}}));
+class Node extends EventTarget{
+ value='';checked=false;disabled=false;textContent='';children:Node[]=[];style:Record<string,string>={};className='';id='';type='';min='';max='';step='';href='';download='';
+ constructor(public tag='div'){super();all.push(this);}
+ set innerHTML(html:string){for(const match of html.matchAll(/<([a-zA-Z]+)\b([^>]*\bid="([^"]+)"[^>]*)>/g)){const n=new Node(match[1]);n.id=match[3];n.value=/\bvalue="([^"]*)"/.exec(match[2])?.[1]??'';nodes.set(n.id,n);}}
+ append(...items:Node[]){this.children.push(...items);}prepend(...items:Node[]){this.children.unshift(...items);}replaceChildren(...items:Node[]){this.children=items;}setAttribute(key:string,value:string){if(key==='class')this.className=value;}
+ click(){if(!this.disabled)this.dispatchEvent(new Event('click'));}
+}
+let nodes:Map<string,Node>,all:Node[];
+const el=(id:string)=>{const n=nodes.get(id);if(!n)throw Error('Missing test DOM node '+id);return n;};
+const flush=async()=>{for(let i=0;i<20;i++)await Promise.resolve();};
+const record=()=>({record_id:'A',owner:account,revision:0,status:'LOCKED',source_url:source.test_url,source_sha256:source.sha256,source:structuredClone(fixture),result:null});
+beforeEach(()=>{vi.resetModules();vi.clearAllMocks();nodes=new Map();all=[];const app=new Node('div');nodes.set('app',app);vi.stubGlobal('document',{querySelector:(q:string)=>q==='#app'?app:null,getElementById:el,createElement:(tag:string)=>new Node(tag),createElementNS:(_:string,tag:string)=>new Node(tag),querySelectorAll:(q:string)=>all.filter(n=>q.split(',').includes(n.tag))});});
+async function mount(){await import('../src/main');el('address').value=address;el('recordId').value='A';el('address').dispatchEvent(new Event('input'));}
+it('actual page disables every configuration input while loading and discards delayed A after visible ID B',async()=>{let resolve!:(v:unknown)=>void;m.read.mockReturnValue(new Promise(r=>{resolve=r;}));await mount();el('load').click();await flush();expect(el('recordId').disabled).toBe(true);expect(el('address').disabled).toBe(true);el('recordId').value='B';el('recordId').dispatchEvent(new Event('input'));resolve(record());await flush();expect(el('chainRecord').textContent).toBe('');expect(el('derive').disabled).toBe(true);expect(m.act).not.toHaveBeenCalled();});
+it('actual action handler refuses loaded A when the visible ID is changed silently to B',async()=>{m.read.mockResolvedValue(record());await mount();el('load').click();await flush();expect(el('derive').disabled).toBe(false);el('recordId').value='B';el('derive').click();await flush();expect(m.act).not.toHaveBeenCalled();expect(el('notice').textContent).toContain('context');});
+it('actual page derives the loaded ID and expected revision, then discards a stale callback',async()=>{m.read.mockResolvedValue(record());let resolve!:(v:unknown)=>void;m.act.mockReturnValue(new Promise(r=>{resolve=r;}));await mount();el('load').click();await flush();el('derive').click();await flush();expect(m.act).toHaveBeenCalledWith(address.toLowerCase(),'A','derive',['A',0]);expect(el('sourceUrl').disabled).toBe(true);el('recordId').value='B';el('recordId').dispatchEvent(new Event('input'));resolve({...record(),revision:1,status:'DERIVED'});await flush();expect(el('chainRecord').textContent).toBe('');expect(el('confirm').disabled).toBe(true);});

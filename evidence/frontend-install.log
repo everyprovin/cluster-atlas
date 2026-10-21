@@ -1,0 +1,26 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 98, reused 32, downloaded 0, added 0
+[WARN] deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Packages: +268
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 318, reused 268, downloaded 0, added 0
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: C:\Users\Administrator\AppData\Local\pnpm\store\v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 318, reused 268, downloaded 0, added 66
+Progress: resolved 318, reused 268, downloaded 0, added 117
+Progress: resolved 318, reused 268, downloaded 0, added 187
+Progress: resolved 318, reused 268, downloaded 0, added 244
+Progress: resolved 318, reused 268, downloaded 0, added 267
+Progress: resolved 318, reused 268, downloaded 0, added 268
+Progress: resolved 318, reused 268, downloaded 0, added 268, done
+
+dependencies:
++ genlayer-js 2.0.0-rc.2
+
+devDependencies:
++ typescript 5.9.3 (7.0.2 is available)
++ vite 7.1.12 (8.3.4 is available)
++ vitest 3.2.4 (5.0.5 is available)
+
+Done in 12.3s using pnpm v11.25.0

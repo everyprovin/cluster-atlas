@@ -1,0 +1,72 @@
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ❯ tests/wallet.test.ts (38 tests | 2 failed) 66ms
+   ✓ characterizes actual SDK helper and viem formatter against a captured public Studio shape 6ms
+   ✓ decodes an actual SDK dictionary view and preserves errors 8ms
+   ✓ rejects a mismatched decoded dictionary boundary: null 1ms
+   ✓ rejects a mismatched decoded dictionary boundary: %j 0ms
+   ✓ rejects a mismatched decoded dictionary boundary: 42 1ms
+   ✓ rejects a mismatched decoded dictionary boundary: true 1ms
+   ✓ rejects a mismatched decoded dictionary boundary: "{\"revision\":1}" 0ms
+   ✓ blocks wrong chain or changed account before submission 2ms
+   ✓ rejects a missing deployment and mutable or cross-project source before signing 2ms
+   ✓ proves finalized raw leader success before reading, even when SDK formatter is unavailable 3ms
+   ✓ retains unknown evidence and never refreshes/resubmits: hash 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: sender 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: target 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: nonzero 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: booleanzero 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: missingvalue 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: mode 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: leaderonly 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: majority 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: pending 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: noleader 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: duplicateleader 1ms
+   ✓ retains unknown evidence and never refreshes/resubmits: leadererror 1ms
+   ✓ rejects conflicting available SDK fields { statusName: 'PENDING' } 1ms
+   ✓ rejects conflicting available SDK fields { hash: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee' } 0ms
+   ✓ rejects conflicting available SDK fields { from_address: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' } 0ms
+   ✓ rejects conflicting available SDK fields { to_address: '0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb' } 0ms
+   ✓ rejects conflicting available SDK fields { value: 1n } 0ms
+   ✓ rejects conflicting available SDK fields { txExecutionResultName: 'FINISHED_WITH_ERROR' } 0ms
+   ✓ persists exact pending metadata and resumes after reload without write replay 1ms
+   ✓ retains unknown submission without hash and allows bound observation only 1ms
+   ✓ clears a user-rejected signature but preserves a pending read failure 1ms
+   ✓ does not observe a pending hash under another wallet account 1ms
+   ✓ rejects an additional conflicting available SDK receipt field 1ms
+   ✓ rejects an additional conflicting available SDK receipt field 0ms
+   ✓ rejects an additional conflicting available SDK receipt field 1ms
+   × rejects conflicting named/numeric SDK execution or unknown numeric codes 18ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+   × rejects conflicting named/numeric SDK execution or unknown numeric codes 2ms
+     → promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/wallet.test.ts > rejects conflicting named/numeric SDK execution or unknown numeric codes
+ FAIL  tests/wallet.test.ts > rejects conflicting named/numeric SDK execution or unknown numeric codes
+AssertionError: promise resolved "{ record_id: 'demo', revision: 1 }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "record_id": "demo",
++   "revision": 1,
+  }
+
+ ❯ tests/wallet.test.ts:33:314
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 36 passed (38)
+   Start at  06:53:20
+   Duration  2.38s (transform 246ms, setup 0ms, collect 1.15s, tests 66ms, environment 0ms, prepare 577ms)
+

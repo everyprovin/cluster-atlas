@@ -1,0 +1,37 @@
+{
+  "id": "cluster-atlas",
+  "title": "ClusterAtlas",
+  "profile": "profile05",
+  "category": "Project",
+  "summary": "A metric validator and canonical minimum-spanning-tree explorer with interactive single-linkage thresholds.",
+  "originality": "Original domain-specific application and fixtures, not a renamed existing Intelligent Contract.",
+  "license": "MIT",
+  "contract_path": "contract.py",
+  "contract_sha256": "f56d06d4803c636ff0b7c17f6e56c22813833086ee92670ebca1256df3d86a14",
+  "constructor_args": [],
+  "fixture": {
+    "path": "fixtures/metric.json",
+    "sha256": "148da86a05d5abe5b229a43612e84a6dec174fab8bb29358b5fdb8450b46560a",
+    "synthetic": true,
+    "pii": false,
+    "test_url": "https://raw.githubusercontent.com/fixture-lab/genlayer-profile05/0000000000000000000000000000000000000000/profile05/projects/cluster-atlas/fixtures/metric.json",
+    "public_url": null
+  },
+  "local_sdk_tests": 34,
+  "local_frontend_tests": 54,
+  "independent_review": {
+    "status": "independent_read_only_local_scope_passed",
+    "reviewer": "/root/genlayer_contract_pair02",
+    "record": "evidence/independent-review.json",
+    "record_sha256": "5ceb2ef00bd0aa1793f3be6ffbb73eeefc6c991b82d980981c398fb12db634cb"
+  },
+  "deployment": null,
+  "publication": null,
+  "hosting": null,
+  "live_wallet_business_flow": null,
+  "browser_visual_review": null,
+  "actual_users": null,
+  "financing": null,
+  "awards": null,
+  "contract_counted_separately_as_ic": false
+}

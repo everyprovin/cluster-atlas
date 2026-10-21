@@ -1,0 +1,240 @@
+$ vitest run
+
+ RUN  v3.2.4 C:/Users/Administrator/Documents/ChatGPT/web3/contributions/genlayer-2026-10-21/profile05/projects/cluster-atlas/frontend
+
+ ❯ tests/context.test.ts (4 tests | 4 failed) 20ms
+   × discards a delayed A response after the visible ID becomes B 14ms
+     → not implemented
+   × prevents an action against loaded A when visible controls name B 1ms
+     → not implemented
+   × accepts only the exact captured ID and discards invalidated wallet contexts 1ms
+     → not implemented
+   × case-insensitive address comparisons retain exact record ID sensitivity 1ms
+     → not implemented
+ ✓ tests/domain.test.ts (7 tests) 23ms
+ ❯ tests/wallet.test.ts (33 tests | 31 failed) 45ms
+   ✓ characterizes actual SDK helper and viem formatter against a captured public Studio shape 6ms
+   × decodes an actual SDK dictionary view and preserves errors 11ms
+     → not implemented
+   × rejects a mismatched decoded dictionary boundary: null 1ms
+     → not implemented
+   × rejects a mismatched decoded dictionary boundary: %j 1ms
+     → not implemented
+   × rejects a mismatched decoded dictionary boundary: 42 1ms
+     → not implemented
+   × rejects a mismatched decoded dictionary boundary: true 1ms
+     → not implemented
+   × rejects a mismatched decoded dictionary boundary: "{\"revision\":1}" 1ms
+     → not implemented
+   × blocks wrong chain or changed account before submission 1ms
+     → not implemented
+   ✓ rejects a missing deployment and mutable or cross-project source before signing 6ms
+   × proves finalized raw leader success before reading, even when SDK formatter is unavailable 1ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: hash 1ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: sender 1ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: target 1ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: nonzero 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: booleanzero 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: missingvalue 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: mode 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: leaderonly 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: majority 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: pending 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: noleader 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: duplicateleader 0ms
+     → not implemented
+   × retains unknown evidence and never refreshes/resubmits: leadererror 0ms
+     → not implemented
+   × rejects conflicting available SDK fields { statusName: 'PENDING' } 0ms
+     → not implemented
+   × rejects conflicting available SDK fields { hash: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee' } 0ms
+     → not implemented
+   × rejects conflicting available SDK fields { from_address: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' } 0ms
+     → not implemented
+   × rejects conflicting available SDK fields { to_address: '0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb' } 0ms
+     → not implemented
+   × rejects conflicting available SDK fields { value: 1n } 0ms
+     → not implemented
+   × rejects conflicting available SDK fields { txExecutionResultName: 'FINISHED_WITH_ERROR' } 0ms
+     → not implemented
+   × persists exact pending metadata and resumes after reload without write replay 1ms
+     → not implemented
+   × retains unknown submission without hash and allows bound observation only 0ms
+     → not implemented
+   × clears a user-rejected signature but preserves a pending read failure 1ms
+     → not implemented
+   × does not observe a pending hash under another wallet account 1ms
+     → not implemented
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 35 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/context.test.ts > discards a delayed A response after the visible ID becomes B
+Error: not implemented
+ ❯ RecordContext.start src/context.ts:1:91
+
+ ❯ tests/context.test.ts:3:190
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/35]⎯
+
+ FAIL  tests/context.test.ts > prevents an action against loaded A when visible controls name B
+Error: not implemented
+ ❯ RecordContext.start src/context.ts:1:91
+
+ ❯ tests/context.test.ts:4:171
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/35]⎯
+
+ FAIL  tests/context.test.ts > accepts only the exact captured ID and discards invalidated wallet contexts
+Error: not implemented
+ ❯ RecordContext.start src/context.ts:1:91
+
+ ❯ tests/context.test.ts:5:182
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/35]⎯
+
+ FAIL  tests/context.test.ts > case-insensitive address comparisons retain exact record ID sensitivity
+Error: not implemented
+ ❯ RecordContext.start src/context.ts:1:91
+
+ ❯ tests/context.test.ts:6:178
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/35]⎯
+
+ FAIL  tests/wallet.test.ts > decodes an actual SDK dictionary view and preserves errors
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ tests/wallet.test.ts:19:88
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/35]⎯
+
+ FAIL  tests/wallet.test.ts > rejects a mismatched decoded dictionary boundary: null
+ FAIL  tests/wallet.test.ts > rejects a mismatched decoded dictionary boundary: %j
+ FAIL  tests/wallet.test.ts > rejects a mismatched decoded dictionary boundary: 42
+ FAIL  tests/wallet.test.ts > rejects a mismatched decoded dictionary boundary: true
+ FAIL  tests/wallet.test.ts > rejects a mismatched decoded dictionary boundary: "{\"revision\":1}"
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ tests/wallet.test.ts:20:151
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/35]⎯
+
+ FAIL  tests/wallet.test.ts > blocks wrong chain or changed account before submission
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:21:86
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/35]⎯
+
+ FAIL  tests/wallet.test.ts > proves finalized raw leader success before reading, even when SDK formatter is unavailable
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:23:121
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/35]⎯
+
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: hash
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: sender
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: target
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: nonzero
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: booleanzero
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: missingvalue
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: mode
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: leaderonly
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: majority
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: pending
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: noleader
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: duplicateleader
+ FAIL  tests/wallet.test.ts > retains unknown evidence and never refreshes/resubmits: leadererror
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:24:1045
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/35]⎯
+
+ FAIL  tests/wallet.test.ts > rejects conflicting available SDK fields { statusName: 'PENDING' }
+ FAIL  tests/wallet.test.ts > rejects conflicting available SDK fields { hash: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee' }
+ FAIL  tests/wallet.test.ts > rejects conflicting available SDK fields { from_address: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' }
+ FAIL  tests/wallet.test.ts > rejects conflicting available SDK fields { to_address: '0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb' }
+ FAIL  tests/wallet.test.ts > rejects conflicting available SDK fields { value: 1n }
+ FAIL  tests/wallet.test.ts > rejects conflicting available SDK fields { txExecutionResultName: 'FINISHED_WITH_ERROR' }
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:25:283
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/35]⎯
+
+ FAIL  tests/wallet.test.ts > persists exact pending metadata and resumes after reload without write replay
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:26:108
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/35]⎯
+
+ FAIL  tests/wallet.test.ts > retains unknown submission without hash and allows bound observation only
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:27:104
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/35]⎯
+
+ FAIL  tests/wallet.test.ts > clears a user-rejected signature but preserves a pending read failure
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:28:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/35]⎯
+
+ FAIL  tests/wallet.test.ts > does not observe a pending hash under another wallet account
+Error: not implemented
+ ❯ new WalletSession src/wallet.ts:29:63
+
+ ❯ make tests/wallet.test.ts:15:16
+ ❯ ready tests/wallet.test.ts:16:32
+ ❯ tests/wallet.test.ts:29:91
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/35]⎯
+
+
+ Test Files  2 failed | 1 passed (3)
+      Tests  35 failed | 9 passed (44)
+   Start at  06:41:59
+   Duration  2.97s (transform 837ms, setup 0ms, collect 1.97s, tests 88ms, environment 1ms, prepare 2.42s)
+
+[ELIFECYCLE] Test failed. See above for more details.

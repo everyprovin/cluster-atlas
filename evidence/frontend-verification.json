@@ -1,0 +1,144 @@
+{
+  "checks": {
+    "frontend_tests": {
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "test"
+      ]
+    },
+    "typescript": {
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "exec",
+        "tsc",
+        "--noEmit"
+      ]
+    },
+    "vite_build": {
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "exec",
+        "vite",
+        "build"
+      ]
+    }
+  },
+  "live_wallet_test": null,
+  "deployment": null,
+  "publication": null,
+  "hosting": null,
+  "visual_browser_review": null,
+  "frontend_tests_passed": 54,
+  "frontend_files": [
+    {
+      "path": "README.md",
+      "bytes": 320,
+      "sha256": "e5a24d7cd5cbfe2e17dad09fb446146a5055dd58d37e19fd9c2b777c6efebfc7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 253,
+      "sha256": "0c1bd9cde69b25de3a858180aba40bd1792267a61fc2b56a10f324d2f06d2842"
+    },
+    {
+      "path": "package.json",
+      "bytes": 429,
+      "sha256": "74f93a11b6fe15cca7b4b5cbddc6ac3925780d7d51d1599bcd616fffa02680c2"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "bytes": 95858,
+      "sha256": "1a187b4ddf8c5f62a6902aa88f7d0acd1aa794d22cbc7cdc38a71893363f1f86"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "bytes": 82,
+      "sha256": "57a99a3c60c503878f848fe022a97a723f2691c82d9099662bedf8d22bf04e40"
+    },
+    {
+      "path": "src/context.ts",
+      "bytes": 1232,
+      "sha256": "d5ebd212ad1d916a61a8fd4fb84ef55f571e763885c7c77ceb020ccd4e6c3ef6"
+    },
+    {
+      "path": "src/domain.ts",
+      "bytes": 3697,
+      "sha256": "c9d4525d3c5ec9160cdca4975e9c55dd88b747913492972bf5a66aed6b39572c"
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 6332,
+      "sha256": "b81622225e5deba5611c25bc23b6b986a033cc63f112a10d47afcb1f06bee944"
+    },
+    {
+      "path": "src/public-json.ts",
+      "bytes": 1705,
+      "sha256": "c3b5bf4cd519263c9988b81ada6d41724b3060e9d65d42f23b91f65fe690daa2"
+    },
+    {
+      "path": "src/shell.ts",
+      "bytes": 9412,
+      "sha256": "c0dc8a7491ebac2c78b5e17547f77c40dc290d060887bf5c3acb66de1c82b87b"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 5393,
+      "sha256": "85866e9e83ca47c6990fa8b76488ffa171768585695ec2d52cf159dfd86ca612"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "src/wallet.ts",
+      "bytes": 11778,
+      "sha256": "40ac278e184e51cafe2952ec77cee76ee305d649218e886287f624b01b8f0a27"
+    },
+    {
+      "path": "tests/context.test.ts",
+      "bytes": 1582,
+      "sha256": "40b1e4b0d5b25a92c61e61099df267fd4b084d2c74f7dc1341a69aa7bc71212e"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "bytes": 2199,
+      "sha256": "b8ec0601b934fd294432749ddf3da8016e55e6602dd430765123327c52dbc2be"
+    },
+    {
+      "path": "tests/public-json.test.ts",
+      "bytes": 680,
+      "sha256": "38e4f67f355894965583b07e3976afc1c866b62b09737cfcb2149994e6ba3199"
+    },
+    {
+      "path": "tests/public-studio-receipt.ts",
+      "bytes": 1008,
+      "sha256": "2b9d2c2dedb864c7fc334634ffff05988e4115eba74fb236ad5ac9c8533f2f7c"
+    },
+    {
+      "path": "tests/ui-race.test.ts",
+      "bytes": 3874,
+      "sha256": "a1ece1a4b61817484e7f73bce0b29c274a1dd83a63366cd3ecebb69cd890b5da"
+    },
+    {
+      "path": "tests/wallet.test.ts",
+      "bytes": 8767,
+      "sha256": "a489a769bbe4e26d27e4cc1443b8698da1012e1cc61a8027fdc0d4d72055c1c7"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 225,
+      "sha256": "4a71bf0d519cfc68771a7fbce06f7ff31cce7f83494f44e64454cbd14f838155"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 77,
+      "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968"
+    }
+  ],
+  "frontend_source_tree_sha256": "310d0d0cadd65eb03b40d6842e88f35e512f1ceb99c1bd10a5431b6cced2f779",
+  "known_build_notice": "Vite reports a >500kB JS chunk from the actual genlayer-js SDK dependency; build succeeds."
+}

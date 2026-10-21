@@ -1,0 +1,11 @@
+{
+  "protocol": "ClusterAtlas-v1",
+  "network": "studio",
+  "chain_id": 61999,
+  "contract_address": null,
+  "deployment_tx": null,
+  "deployment": null,
+  "publication": null,
+  "hosting": null,
+  "live_wallet_test": null
+}
